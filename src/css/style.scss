@@ -1,1 +1,18 @@
-body{}
+@import "framework.scss";
+body{
+
+}
+.section{
+    min-height: 100vh;
+}
+.information{
+    padding: 100px 0;
+    background: #b41f19 url("../img/information-bg.jpg") no-repeat center / cover;
+    background-blend-mode: hard-light;
+    color: #fff;
+}
+.concert{
+    padding: 100px 0;
+    background: #232323;
+    color: #fff;
+}
