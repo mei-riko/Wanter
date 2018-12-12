@@ -1,18 +1,267 @@
 @import "framework.scss";
-body{
+@import "fonts.scss";
 
+//MIXIN
+@mixin transition($time, $style, $css ){
+    transition: $time $css $style;
+}
+
+//OTHER
+a{
+    outline:none;
+    @include transition(.3s, linear , all);
+    &:hover{
+        color: inherit;
+        text-decoration: none;
+        outline:none;
+    }
+    &:focus{
+        color: inherit;
+        text-decoration: none;
+        outline:none;
+    }
+}
+.oswald{
+    font-family: 'Oswald';
+    font-weight: 400;
+}
+.text-bold{
+    font-weight: 600;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+// BUTTON
+.btn{
+    position: relative;
+    display: inline-block;
+    font-family: "Oswald";
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+    &_default{
+        color:#fff;
+        z-index: 5;
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:0;
+            background: #fff;
+            opacity:.2;
+        }
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0;
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: -1;
+            background: #fff;
+            @include transition(.4s, ease-in-out, height );
+        }
+        &:hover{
+            color:#232323;
+            &:after{
+                height: 100%;
+            }
+        }
+    }
+}
+
+// NAVBAR
+.navbar-dark{
+    .navbar-nav{
+        font-family: 'Oswald';
+        font-weight: 600;
+        font-size: 20px;
+        .nav-item{
+            max-width: 160px;
+            .nav-link{
+                position: relative;
+                color:#fff;
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height:8px;
+                    position: absolute;
+                    bottom: -8px;
+                    left:1.5rem;
+                    background: #b41f19;
+                    @include transition(.4s, ease-in-out, width );
+                }
+                &:hover:after{
+                    width:calc(100% - 3rem);
+                }
+            }
+            &.active{
+                .nav-link{
+                    &:after{
+                        width:calc(100% - 3rem);
+                    }
+                }
+            }
+        }
+    }
 }
 .section{
-    min-height: 100vh;
+    @extend .d-flex;
+    @extend .align-items-center;
 }
+// INDECX PAGE
 .information{
-    padding: 100px 0;
-    background: #b41f19 url("../img/information-bg.jpg") no-repeat center / cover;
+    background: #b41f19 url("../img/information-bg.jpg") no-repeat right center / cover;
     background-blend-mode: hard-light;
     color: #fff;
+    min-height: 100vh;
+    &__title{
+        position: relative;
+        z-index: 2;
+        &:after{
+            content:'';
+            display: block;
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            left: -6px;
+            bottom: -15px;
+            background: #150403;
+            z-index: -1;
+        }
+    }
+    &__concert{
+        margin-bottom: 1rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .data{
+            color:rgba(255,255,255,.8);
+        }
+        .city{
+            font-size: 1.25rem;
+        }
+    }
 }
 .concert{
-    padding: 100px 0;
-    background: #232323;
+    background: #181717;
     color: #fff;
+    &__content{
+        &:nth-child(1){
+            background: #b41f19 url("../img/moscow.jpg") no-repeat center / cover;
+        }
+        &:nth-child(2){
+            background: #b41f19 url("../img/spb.jpg") no-repeat center / cover;
+        }
+        &:nth-child(3){
+            background: #b41f19 url("../img/prague.jpg") no-repeat center / cover;
+        }
+        background-blend-mode: darken;
+        &:hover{
+            background:#b41f19;
+        }
+        .data{
+            font-size: 14px;
+            color:rgba(255,255,255,.8);
+        }
+    }
 }
+.music{
+    background: #170403;
+    color: #fff;
+    &__col{
+        height:200px;
+    }
+}
+.photo{
+    background: #000;
+    color: #b41f19;
+}
+.blog{
+    background: #181717;
+    color: #fff;
+    &_inside{
+        min-height: 100vh;
+        padding: 100px 0 3rem;
+    }
+    a.blog__title{
+        display: inline-block;
+        @include transition(.3s, linear , all);
+        &:hover{
+            transform: translateX(10px);
+        }
+    }
+    &__news{
+        position: relative;
+        z-index: 10;
+        display: block;
+        padding: 15px;
+        margin-bottom: 30px;
+        background: rgba(255,255,255,.2);
+        color: #fff;
+        @extend .lead;
+        .blog__news_subtitle{
+            opacity: .7;
+            display: block;
+            margin-top: .25rem;
+            font-size: 14px;
+        }
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top:0;
+            right:0;
+            width: 0;
+            height: 100%;
+            background-color: #141212;
+            @include transition(.4s, ease-in-out, width );
+        }
+        &:hover:after{
+            width:100%;
+        }
+    }
+}
+.text{
+    background: #181717;
+    color: #fff;
+    min-height: 100vh;
+    padding: 100px 0 3rem;
+}
+@media (min-width: 992px){
+    .navbar-dark{
+        .navbar-nav{
+            .nav-link{
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
+            }
+        }
+    }
+    .section{
+        max-height: 100vh;
+    }
+    .information{
+        background: #b41f19 url("../img/information-bg.jpg") no-repeat center / cover;
+    }
+}
+@media (min-width: 1200px){
+    .blog{
+        &__news{
+            height: 200px;
+        }
+    }
+}
+
+// BLOG PAGE
+
+// TEXT PAGE

@@ -1,11 +1,104 @@
 html(lang="ru", dir="ltr")
     include chunks/head.pug
     body
-        script(src="http://code.jquery.com/jquery-3.3.1.min.js")
+        script(src="../js/jquery-3.3.1.min.js")
         include chunks/header.pug
+
         #fullpage
-            section.section.information#main(data-section-name="main")
-                h1.information__title Восход
-            section.section.concert#concert(data-section-name="concert")
-                .title Концерты
+            section.section.pt-5.pb-5.pt-xl-0.pb-xl-0.information#main(data-section-name="main")
+                .container
+                    .row.align-items-center
+                        .col-md-6.pt-5.pb-5.pt-xl-0.pb-xl-0
+                            h1.information__title.oswald.text-uppercase Ближайшие концерты
+                        .col-md-4
+                            .information__concert
+                                .data 13.12.2018
+                                .city Москва
+                            .information__concert
+                                .data 18.12.2018
+                                .city Санкт-Петербург
+                            .information__concert
+                                .data 27.12.2018
+                                .city Прага
+            section.section.pt-5.pb-5.pt-xl-0.pb-xl-0.concert#concert(data-section-name="concert")
+                .container
+                    h2.concert__title.h1.oswald.text-uppercase.mb-5 Расписание концертов
+                    .row.m-0
+                        .col-md-4.concert__content.pb-4.pt-4
+                            .city.text-right.h4.mb-3 Москва
+                            .data.mb-3 13.12.2018
+                            .offer.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            a.btn.btn_default(href="#") Купить билеты
+                        .col-md-4.concert__content.pb-4.pt-4
+                            .city.text-right.h4.mb-3 Санкт-Петербург
+                            .data.mb-3 18.12.2018
+                            .offer.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            a.btn.btn_default(href="#") Купить билеты
+                        .col-md-4.concert__content.pb-4.pt-4
+                            .city.text-right.h4.mb-3 Прага
+                            .data.mb-3 27.12.2018
+                            .offer.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            a.btn.btn_default(href="#") Купить билеты
+            section.section.pt-5.pb-5.pt-xl-0.pb-xl-0.music#music(data-section-name="music")
+                .container.section__padding
+                    .row
+                        .col-md-6.music__col.mb-4
+                            iframe(width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/308491408&color=%23b41f19&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true")
+                        .col-md-6.music__col.mb-4
+                            iframe(width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/308491409&color=%23b41f19&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true")
+                        .col-md-6.music__col.mb-4.mb-md-0
+                            iframe(width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/308491399&color=%23b41f19&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true")
+                        .col-md-6.music__col
+                            iframe(width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/308491409&color=%23b41f19&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true")
+            section.section.pt-5.pb-5.pt-xl-0.pb-xl-0.photo#photo(data-section-name="photo")
+                .container
+                    h3.blog__title.h1.oswald.text-uppercase.mb-5 Фотоотчет
+                    .row.m-0
+                        .col-sm-6.col-md-4.p-0
+                            a(data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" href="../img/big_1.jpg")
+                                img.img-fluid(src="../img/small_1.jpg")
+                        .col-sm-6.col-md-4.p-0
+                            a(data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" href="../img/big_4.jpg")
+                                img.img-fluid(src="../img/small_4.jpg")
+                        .col-sm-6.col-md-4.p-0
+                            a(data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" href="../img/big_2.jpg")
+                                img.img-fluid(src="../img/small_2.jpg")
+                        .col-sm-6.col-md-4.p-0
+                            a(data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" href="../img/big_4.jpg")
+                                img.img-fluid(src="../img/small_4.jpg")
+                        .col-sm-6.col-md-4.p-0
+                            a(data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" href="../img/big_3.jpg")
+                                img.img-fluid(src="../img/small_3.jpg")
+                        .col-sm-6.col-md-4.p-0
+                            a(data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore" href="../img/big_4.jpg")
+                                img.img-fluid(src="../img/small_4.jpg")
+            section.section.pt-5.pb-5.pt-xl-0.pb-xl-0.blog#blog(data-section-name="blog")
+                .container
+                    a.blog__title.h1.oswald.text-uppercase.mb-5(href="blog.html") Hовости
+                    .row.align-items-center
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") СВОБОДА x PLC - УСКОРИТЬСЯ
+                                span.blog__news_subtitle Премьера клипа
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") PLC - «НАВЫЛЕТ»
+                                span.blog__news_subtitle Премьера песни
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") Краснодар
+                                span.blog__news_subtitle 28 декабря 19:00 | Sgt. pepper's
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") Санкт-Петербург
+                                span.blog__news_subtitle 18 декабря 21:30 | Sgt. pepper's
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") PLC - «НАВЫЛЕТ»
+                                span.blog__news_subtitle Премьера песни
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") Краснодар
+                                span.blog__news_subtitle 28 декабря 19:00 | Sgt. pepper's
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") СВОБОДА x PLC - УСКОРИТЬСЯ
+                                span.blog__news_subtitle Премьера клипа
+                        .col-md-6.col-lg-3
+                            a.blog__news(href="text.html") Санкт-Петербург
+                                span.blog__news_subtitle 18 декабря 21:30 | Sgt. pepper's
+        
         include chunks/footer.pug
