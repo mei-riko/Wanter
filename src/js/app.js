@@ -7,7 +7,7 @@ $(document).ready(() => {
     }
     // виджет ВК
     if( typeof VK !== 'undefined' ){
-        VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "auto", height: "400"}, 20003922);
+        VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "auto", height: "200"}, 20003922);
     }
     // Поэкранный скролл на компьютере
     if( $(window).width() > 992 ){
