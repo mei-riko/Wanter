@@ -111,6 +111,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     }
     // ресайз
     (0, _jquery2.default)(window).resize(function () {
+        _jquery2.default.scrollify.destroy();
         if ((0, _jquery2.default)(window).width() > 992) {
             _jquery2.default.scrollify({
                 section: ".section",

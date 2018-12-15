@@ -35,6 +35,7 @@ $(document).ready(() => {
     }
     // ресайз
     $( window ).resize(function() {
+        $.scrollify.destroy();
         if( $(window).width() > 992 ){
             $.scrollify({
                 section : ".section",
