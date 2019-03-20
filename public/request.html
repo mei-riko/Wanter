@@ -1,0 +1,179 @@
+
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Wanter</title>
+    <link href="./bower_components/normalize-css/normalize.css" rel="stylesheet"/>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./bower_components/select2/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <link href="./css/style.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="./js/jquery.min.js"></script>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__navbar navbar navbar-expand">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="">Как мы работаем?</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Связаться с нами</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Контактная информация  </a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="personalPage" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">mail@mail.ru</a>
+                <div class="dropdown-menu" aria-labelledby="personalPage"><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-navbar">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="#"><img class="navbar-brand__logo" src="../images/logoSVG.svg"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=""><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item"><a class="nav-link" href="">Идеи и вдохновение</a></li>
+                <li class="nav-item"><a class="nav-link active" href="">Все заявки  </a></li>
+                <li class="nav-item"><a class="nav-link" href="">Оригинальные заявки</a></li>
+                <li class="nav-item"><a class="nav-link" href="">FAQ</a></li>
+              </ul><a class="btn header-navbar__btn" href="#">Создать заявку</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="filter">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="filter__row d-flex flex-row">
+              <div class="filter__item" id="filter-place"><span class="filter__item__title">Любой город</span></div>
+              <div class="filter__item filter__item--active" id="filter-type"><span class="filter__item__title">Тип заявки</span><span class="filter__item__content">Сюрприз</span></div>
+              <div class="filter__item" id="filter-status"><span class="filter__item__title">Статус заявки</span></div>
+              <div class="filter__item" id="filter-security"><span class="filter__item__title">Только безопасная сделка</span></div>
+            </div>
+          </div>
+          <div class="col d-none d-lg-block text-right">
+            <div class="filter__offer">Отклики на заявки доступны для <a href="#">зарегистрированных </a>пользователей</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <h1 class="content__title">Заявки и предложения<span class="content__info">?</span></h1>
+        <div class="row">
+          <div class="col-md-6 col-xl-3 panel panel_wanter">
+            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
+            <div class="panel__user row align-items-center">
+              <div class="col-lg-3"><img class="panel__user__image" src="../images/male.png"/></div>
+              <div class="col-lg-9"><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+            </div>
+            <div class="panel__info">
+              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+            </div>
+            <div class="panel__footer row">
+              <div class="col-lg-6">
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-lg-6">
+                <div class="panel__favorite"><i class="fa fa-heart" aria-hidden="true"> </i><span>в избранное</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 panel panel_wanter">
+            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
+            <div class="panel__user row align-items-center">
+              <div class="col-lg-3"><img class="panel__user__image" src="../images/male.png"/></div>
+              <div class="col-lg-9"><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+            </div>
+            <div class="panel__info">
+              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+            </div>
+            <div class="panel__footer row">
+              <div class="col-lg-6">
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-lg-6">
+                <div class="panel__favorite"><i class="fa fa-heart" aria-hidden="true"> </i><span>в избранное</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 panel panel_wanter">
+            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
+            <div class="panel__user row align-items-center">
+              <div class="col-lg-3"><img class="panel__user__image" src="../images/male.png"/></div>
+              <div class="col-lg-9"><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+            </div>
+            <div class="panel__info">
+              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+            </div>
+            <div class="panel__footer row">
+              <div class="col-lg-6">
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-lg-6">
+                <div class="panel__favorite"><i class="fa fa-heart" aria-hidden="true"> </i><span>в избранное</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 panel panel_wanter">
+            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
+            <div class="panel__user row align-items-center">
+              <div class="col-lg-3"><img class="panel__user__image" src="../images/male.png"/></div>
+              <div class="col-lg-9"><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+            </div>
+            <div class="panel__info">
+              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+            </div>
+            <div class="panel__footer row">
+              <div class="col-lg-6">
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-lg-6">
+                <div class="panel__favorite"><i class="fa fa-heart" aria-hidden="true"> </i><span>в избранное</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 panel panel_wanter">
+            <div class="panel__user row">
+              <div class="col-lg-3"><img class="panel__user__image" src="../images/male.png"/></div>
+              <div class="col-lg-9"><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span>рейтинг</span></div>
+              </div>
+            </div>
+            <div class="panel__info">
+              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+              <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+              <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div>
+            </div>
+            <div class="panel__footer row">
+              <div class="col-lg-6"><span class="panel__price">1000</span></div>
+              <div class="col-lg-6">
+                <div class="panel__favorite"></div><i class="fa fa-heart" aria-hidden="true">в избранное</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="./bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="./bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

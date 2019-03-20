@@ -3,3 +3,238 @@
 @mixin transition($time, $style, $css ){
     transition: $time $css $style;
 }
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+a, a:hover, a:focus{
+    outline: none;
+}
+// HEADER
+.header-top{
+    font-family: 'Montserrat', sans-serif;
+
+    color: $grey;
+    background: $lightblue;
+
+    font-size: 12px;
+    .navbar{
+        padding: 10px 0;
+    }
+    .navbar-nav{
+        margin-left: -10px;
+        margin-right: -10px;
+        .nav-link{
+            padding: 0 10px;
+            color: $grey;
+            &#personalPage{
+                font-weight: 700;
+            }
+        }
+    }
+}
+.header-navbar{
+    font-family: 'Montserrat', sans-serif;
+
+    border-bottom: 1px solid $b-grey;
+
+    .navbar{
+        padding: 30px 0;
+    }
+    .navbar-brand{
+        &__logo{
+            width: 150px;
+        }
+    }
+    .navbar-nav{
+        .nav-link{
+            padding: 0 15px;
+            color: $grey;
+            font-size: 14px;
+            font-weight: 300;
+            text-transform: uppercase;
+            &.active{
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__btn{
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        color: $white;
+        background: $green;
+        &:hover,
+        &:focus{
+            color: $white;
+        }
+    }
+}
+
+// FILTER
+.filter{
+    border-bottom: 1px solid $b-grey;
+    padding: 14px 0;
+    &__item{
+        font-size: 12px;
+        line-height: 30px;
+
+        color: $grey;
+
+        padding: 0 12px;
+        margin-right: 10px;
+
+        border: 1px solid $b-grey;
+        border-radius: 2px;
+
+        white-space: nowrap;
+        cursor: pointer;
+        &--active{
+            color: $white;
+            background: $green; 
+        }
+
+        &__content{
+            padding-left: 5px;
+            text-transform: uppercase;
+            &:before{
+                content:'-';
+                padding-right: 5px;
+            }
+        }
+    }
+    &__offer{
+        font-size: 12px;
+        a{
+            color: $green;
+            text-decoration: underline;
+        }
+    }
+}
+
+// CONTENT
+.content{
+    padding: 60px 0;
+    &__title{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+
+        position: relative;
+
+        display: inline-block;
+        padding-right: 30px;
+        margin-bottom: 60px;
+    }
+    &__info{
+        border-radius: 50%;
+        background: $b-grey;
+        color: $white;
+
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 15px;
+        width: 15px;
+        text-align: center;
+
+        display: inline-block;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        cursor: pointer;
+    }
+}
+
+// PANEL
+.panel{
+    font-family: "Montserrat";
+
+    margin-bottom: 40px;
+    &__heading{
+        position: relative;
+        height: 130px;
+        background: url("../images/photo_02.jpg") no-repeat center / cover;
+
+        .panel__price{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    }
+    &__price{
+        background: $red;
+        color: $white;
+
+        font-size: 12px;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        padding: 2px 6px;
+        border-radius: 2px;
+    }
+    &__user{
+        padding: 10px 0;
+        &__image{
+            width: 60px; 
+            max-width: 100%; 
+        }
+        &__name{
+            font-size: 14px;
+            font-weight: bold;
+
+            color: $grey;
+
+            margin-bottom: 5px;
+        }
+        &__rating{
+            font-size: 12px;
+            .rating-active{
+                color: $red;
+            }
+            .rating-title{
+                padding: 0 10px;
+            }
+        }
+    }
+    &__info{
+        &__place {
+            font-size: 12px;
+            font-weight: 700;
+
+            line-height: 16px;
+            color: rgb(147, 150, 145);
+            text-transform: uppercase;
+
+            margin-bottom: 5px;
+        }
+        &__title {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+
+            color: $grey;
+            margin-bottom: 15px;
+
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+    &__data{
+        font-size: 10px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__favorite{
+        .fa{
+            border-radius: 4px;
+            background-color: rgb(239, 247, 234);
+            line-height: 28px;
+            width: 28px;
+            text-align: center;
+        }
+    }
+}

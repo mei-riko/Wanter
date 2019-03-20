@@ -56,7 +56,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('html', function () {
-  return gulp.src('./src/**/*.pug')
+  return gulp.src('./src/*.pug')
     .pipe(changed('public', { extension: '.html' }))
     .pipe(plumber())
     .pipe(pug({ pretty: true }).on('error', notify.onError()))

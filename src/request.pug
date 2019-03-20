@@ -1,6 +1,36 @@
-html(lang="ru", dir="ltr")
+html(lang='ru', dir='ltr')
     include chunks/head.pug
     body
-        script(src="./js/jquery-3.3.1.min.js")
+        script(src='./js/jquery.min.js')
         include chunks/header.pug
+
+        .filter
+            .container
+                .row.align-items-center
+                    .col
+                        .filter__row.d-flex.flex-row
+                            .filter__item#filter-place
+                                span.filter__item__title Любой город
+                            .filter__item#filter-type.filter__item--active
+                                span.filter__item__title Тип заявки
+                                span.filter__item__content Сюрприз
+                            .filter__item#filter-status
+                                span.filter__item__title Статус заявки
+                            .filter__item#filter-security
+                                span.filter__item__title Только безопасная сделка
+                    .col.d-none.d-lg-block.text-right
+                        .filter__offer Отклики на заявки доступны для 
+                            a(href='#') зарегистрированных 
+                            | пользователей
+        
+        .content
+            .container
+                h1.content__title Заявки и предложения
+                    span.content__info ?
+                .row
+                    include chunks/panel-image.pug
+                    include chunks/panel-image.pug
+                    include chunks/panel-image.pug
+                    include chunks/panel-image.pug
+                    include chunks/panel-without-image.pug
         include chunks/footer.pug
