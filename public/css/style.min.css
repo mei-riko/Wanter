@@ -2,15 +2,24 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-a, a:hover, a:focus {
+a {
+  -webkit-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  color: #0c0c0c;
+}
+
+a:hover, a:focus {
+  color: #60ad31;
   outline: none;
 }
 
 .header-top {
   font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   color: #393737;
   background: #eff7ea;
-  font-size: 12px;
+  height: 38px;
 }
 
 .header-top .navbar {
@@ -31,9 +40,33 @@ a, a:hover, a:focus {
   font-weight: 700;
 }
 
+.header-top .navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+.header-top .dropdown-menu {
+  top: 26px;
+  left: auto;
+  right: 8px;
+  border-radius: 0;
+  font-size: 12px;
+}
+
+.header-top .dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+.header-top .dropdown-item:focus, .header-top .dropdown-item:hover {
+  background: #eff7ea;
+}
+
+.header-top .dropdown-item.active, .header-top .dropdown-item:active {
+  background: #60ad31;
+}
+
 .header-navbar {
   font-family: 'Montserrat', sans-serif;
-  border-bottom: 1px solid #9c9b9b;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .header-navbar .navbar {
@@ -56,6 +89,10 @@ a, a:hover, a:focus {
   font-weight: 700;
 }
 
+.header-navbar .navbar-nav .nav-link:hover {
+  color: #60ad31;
+}
+
 .header-navbar__btn {
   font-size: 14px;
   font-weight: 700;
@@ -66,27 +103,37 @@ a, a:hover, a:focus {
 
 .header-navbar__btn:hover, .header-navbar__btn:focus {
   color: #fff;
+  background: #55992b;
 }
 
 .filter {
-  border-bottom: 1px solid #9c9b9b;
+  border-bottom: 1px solid #ebebeb;
   padding: 14px 0;
 }
 
 .filter__item {
+  position: relative;
   font-size: 12px;
   line-height: 30px;
   color: #393737;
   padding: 0 12px;
   margin-right: 10px;
-  border: 1px solid #9c9b9b;
+  border: 1px solid #ebebeb;
   border-radius: 2px;
   white-space: nowrap;
   cursor: pointer;
 }
 
+.filter__item:hover {
+  background: #eff7ea;
+}
+
 .filter__item--active {
   color: #fff;
+  background: #60ad31;
+}
+
+.filter__item--active:hover {
   background: #60ad31;
 }
 
@@ -109,6 +156,70 @@ a, a:hover, a:focus {
   text-decoration: underline;
 }
 
+.filter__offer a:hover {
+  color: #3f7120;
+}
+
+.filter-dropdown {
+  display: none;
+  position: absolute;
+  left: -1px;
+  top: 100%;
+  z-index: 99;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  width: 280px;
+}
+
+.filter-dropdown--active {
+  display: block;
+}
+
+.filter-dropdown .form-control {
+  font-size: 12px;
+  width: 100% !important;
+}
+
+.filter-dropdown .form-radio {
+  display: block;
+  width: 100%;
+}
+
+.filter-dropdown .form-radio + .form-radio {
+  margin-top: 10px;
+}
+
+.filter-dropdown .form-radio + .filter-dropdown__link {
+  margin-top: 0;
+}
+
+.filter-dropdown__link {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  float: right;
+  color: #60ad31;
+}
+
+.select2 {
+  font-size: 12px;
+  width: 100% !important;
+}
+
+.select2 .select2-selection {
+  border-color: #ebebeb;
+}
+
+.select2-container--default .select2-results__option {
+  font-size: 12px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background: #60ad31;
+}
+
 .content {
   padding: 60px 0;
 }
@@ -125,8 +236,8 @@ a, a:hover, a:focus {
 
 .content__info {
   border-radius: 50%;
-  background: #9c9b9b;
-  color: #fff;
+  background: #ebebeb;
+  color: #60ad31;
   font-size: 10px;
   font-weight: 700;
   line-height: 15px;
@@ -148,6 +259,7 @@ a, a:hover, a:focus {
   position: relative;
   height: 130px;
   background: url("../images/photo_02.jpg") no-repeat center/cover;
+  margin-bottom: 10px;
 }
 
 .panel__heading .panel__price {
@@ -167,7 +279,7 @@ a, a:hover, a:focus {
 }
 
 .panel__user {
-  padding: 10px 0;
+  padding: 0 0 10px;
 }
 
 .panel__user__image {
@@ -223,10 +335,132 @@ a, a:hover, a:focus {
   font-weight: 700;
 }
 
-.panel__favorite .fa {
+.panel__offer {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.panel__favorite {
+  text-align: right;
+  cursor: pointer;
+}
+
+.panel__favorite__icon {
+  text-align: center;
   border-radius: 4px;
-  background-color: #eff7ea;
+  background-color: #ebebeb;
+  font-size: 12px;
   line-height: 28px;
   width: 28px;
-  text-align: center;
+  -webkit-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.panel__favorite:hover .panel__favorite__icon {
+  color: #db3333;
+  background-color: #dedede;
+}
+
+.panel__favorite--active .fa {
+  color: #db3333;
+}
+
+.form-radio input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+.form-radio input:checked + .form-radio__title:after {
+  opacity: 1;
+}
+
+.form-radio input:focus + .form-radio__title:before {
+  opacity: 0.5;
+}
+
+.form-radio__title {
+  position: relative;
+  padding: 0 0 0 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.form-radio__title:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ebebeb;
+  border-radius: 50%;
+  background: #eff7ea;
+}
+
+.form-radio__title:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #60ad31;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.footer {
+  border-top: 1px solid #a5a5a5;
+}
+
+.footer .navbar-brand__logo {
+  width: 150px;
+}
+
+.footer .copyright {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer__contact {
+  margin-bottom: 20px;
+}
+
+.footer__contact a {
+  color: #60ad31;
+  font-weight: 700;
+}
+
+.footer__pay {
+  height: 20px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 10px;
+}
+
+.footer__pay_mastercard {
+  height: 32px;
+}
+
+.footer__label {
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.footer__nav {
+  padding-left: 14px;
+  font-size: 14px;
+}
+
+.footer__nav li + li {
+  margin-top: 5px;
 }

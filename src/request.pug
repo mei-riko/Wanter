@@ -11,26 +11,56 @@ html(lang='ru', dir='ltr')
                         .filter__row.d-flex.flex-row
                             .filter__item#filter-place
                                 span.filter__item__title Любой город
+                            .filter-dropdown(data-filter="filter-place")
+                                select.form-control.js-placeholder-search
+                                    option Начните вводить...
+                                a.filter-dropdown__link(href="#") Применить
                             .filter__item#filter-type.filter__item--active
                                 span.filter__item__title Тип заявки
                                 span.filter__item__content Сюрприз
+                            .filter-dropdown(data-filter="filter-type")
+                                select.form-control.js-placeholder-single
+                                    option Поручение
+                                    option Покупка
+                                    option Сюрприз
+                                    option Творчество
+                                    option Отправка
+                                    option Прочее
+                                a.filter-dropdown__link(href="#") Применить
                             .filter__item#filter-status
                                 span.filter__item__title Статус заявки
+                            .filter-dropdown(data-filter="filter-status")
+                                label.form-radio
+                                    input(type="radio" name="status" checked)
+                                    span.form-radio__title Опубликована
+                                label.form-radio
+                                    input(type="radio" name="status") 
+                                    span.form-radio__title Исполняется
+                                label.form-radio
+                                    input(type="radio" name="status")
+                                    span.form-radio__title На проверке
+                                label.form-radio
+                                    input(type="radio" name="status")
+                                    span.form-radio__title Завершена
+                                a.filter-dropdown__link(href="#") Применить
                             .filter__item#filter-security
                                 span.filter__item__title Только безопасная сделка
                     .col.d-none.d-lg-block.text-right
                         .filter__offer Отклики на заявки доступны для 
-                            a(href='#') зарегистрированных 
-                            | пользователей
-        
+                            a(href='#') зарегистрированных
+                            |  пользователей
         .content
             .container
                 h1.content__title Заявки и предложения
-                    span.content__info ?
+                    span.content__info(data-toggle="tooltip" data-placement="right" title="Подсказка-информер") ?
                 .row
                     include chunks/panel-image.pug
                     include chunks/panel-image.pug
                     include chunks/panel-image.pug
                     include chunks/panel-image.pug
                     include chunks/panel-without-image.pug
+                    include chunks/panel-image.pug
+                    include chunks/panel-without-image.pug
+                    include chunks/panel-without-image.pug
         include chunks/footer.pug
+        script(src="./bower_components/select2/dist/js/select2.min.js")

@@ -1,6 +1,30 @@
-footer
+footer.footer
+    .container 
+        .row.pt-5.pb-5 
+            .col-sm-6.col-lg-4 
+                a.navbar-brand(href="#")
+                    img.navbar-brand__logo(src="./images/logoSVG.svg")
+                p.copyright Инновационный сервис по выполнению <br/>поручений в России и за рубежом.
+                p.footer__contact E-mail: 
+                    a(href="mailto:mail@thewanter.com") mail@thewanter.com
+            .col-sm-6.col-lg-4 
+                p.footer__label Правила сервиса
+                ul.footer__nav 
+                    li
+                        a.footer__nav__item(href="/terms-of-use" tabindex="-1") Пользовательское соглашение
+                    li
+                        a.footer__nav__item(href="/privacy-policy" tabindex="-1") Политика конфиденциальности
+                    li
+                        a.footer__nav__item(href="/security-policy" tabindex="-1") Политика безопасности
+            .col-sm-6.col-lg-4
+            .col-sm-12.pt-5
+                span.copyright ООО “Wanter”. 2017 © Все права защищены.
+                img.footer__pay(src="images/logo-mir.svg")
+                img.footer__pay.footer__pay_mastercard(src="images/logo-mastercard.svg")
+                img.footer__pay(src="images/visa-logo.svg")
 
 script(src="./bower_components/tether/dist/js/tether.min.js")
 script(src="./bower_components/popper.js/dist/umd/popper.min.js")
 script(src="./bower_components/bootstrap/dist/js/bootstrap.min.js")
+
 script(src="./js/app.min.js")

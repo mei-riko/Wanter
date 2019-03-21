@@ -76,7 +76,31 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _jquery2.default)(document).ready(function () {});
+(0, _jquery2.default)(document).ready(function () {
+    (0, _jquery2.default)('[data-toggle="tooltip"]').tooltip();
+    (0, _jquery2.default)('.js-placeholder-search').select2();
+    (0, _jquery2.default)('.js-placeholder-single').select2({
+        minimumResultsForSearch: 10
+    });
+
+    // filter
+    (0, _jquery2.default)(".filter__item").on("click", function () {
+        var filter = (0, _jquery2.default)(this).attr("id");
+        var leftFilterContainer = (0, _jquery2.default)(".filter .container").offset().left;
+        var leftFilter = (0, _jquery2.default)(this).offset().left;
+        (0, _jquery2.default)(".filter-dropdown").each(function () {
+            if ((0, _jquery2.default)(this).data("filter") === filter) {
+                (0, _jquery2.default)(this).css("left", leftFilter - leftFilterContainer);
+                (0, _jquery2.default)(this).slideToggle();
+            } else {
+                (0, _jquery2.default)(this).css("display", "none");
+            }
+        });
+    });
+    (0, _jquery2.default)(".filter__item#filter-security").on("click", function () {
+        (0, _jquery2.default)(this).toggleClass("filter__item--active");
+    });
+});
 
 /***/ }),
 /* 1 */

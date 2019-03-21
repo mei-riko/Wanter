@@ -6,17 +6,23 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
-a, a:hover, a:focus{
-    outline: none;
+a{
+    @include transition(.2s, linear, all );
+    color: $black;
+    &:hover, &:focus{
+        color: $green;
+        outline: none;
+    }
 }
 // HEADER
 .header-top{
     font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
 
     color: $grey;
     background: $lightblue;
 
-    font-size: 12px;
+    height: 38px;
     .navbar{
         padding: 10px 0;
     }
@@ -29,6 +35,30 @@ a, a:hover, a:focus{
             &#personalPage{
                 font-weight: 700;
             }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .dropdown-menu{
+        top: 26px;
+        left: auto;
+        right: 8px;
+
+        border-radius: 0;
+        
+        font-size: 12px;
+    }
+    .dropdown-toggle::after{
+        vertical-align: middle;
+    }
+    .dropdown-item{
+        &:focus, 
+        &:hover{
+            background: $lightblue;
+        }
+        &.active, &:active{
+            background: $green;
         }
     }
 }
@@ -55,6 +85,9 @@ a, a:hover, a:focus{
             &.active{
                 font-weight: 700;
             }
+            &:hover{
+                color: $green;
+            }
         }
     }
 
@@ -67,15 +100,17 @@ a, a:hover, a:focus{
         &:hover,
         &:focus{
             color: $white;
+            background: darken($green, 5%);
         }
     }
 }
-
 // FILTER
 .filter{
     border-bottom: 1px solid $b-grey;
     padding: 14px 0;
     &__item{
+        position: relative;
+
         font-size: 12px;
         line-height: 30px;
 
@@ -89,9 +124,17 @@ a, a:hover, a:focus{
 
         white-space: nowrap;
         cursor: pointer;
+        
+        &:hover{
+            background: $lightblue;
+        }
+        
         &--active{
             color: $white;
-            background: $green; 
+            background: $green;
+            &:hover{
+                background: $green;
+            }
         }
 
         &__content{
@@ -108,10 +151,75 @@ a, a:hover, a:focus{
         a{
             color: $green;
             text-decoration: underline;
+            &:hover{
+                color: darken($green,15%); 
+            }
         }
     }
 }
+.filter-dropdown{
+    display: none;
 
+    position: absolute;
+    left: -1px;
+    top: 100%;
+
+    z-index: 99;
+
+    padding: 20px;
+    
+    background: $white;
+    border: 1px solid $b-grey;
+    
+    width: 280px;
+
+    &--active{
+        display: block;
+    }
+
+    .form-control{
+        font-size: 12px;
+        width: 100%!important;
+    }
+    .form-radio{
+        display: block;
+        width: 100%;
+        & + .form-radio{
+            margin-top: 10px;
+        }
+        & + .filter-dropdown__link{
+            margin-top: 0;
+        }
+    }
+
+    &__link{
+        margin-top: 20px;
+
+        font-size:12px;
+        font-weight:700;
+        text-decoration: underline;
+
+        float: right;
+        color: $green;
+    }
+}
+// SELECT2
+.select2{
+    font-size: 12px;
+    width: 100%!important;
+    .select2-selection{
+        border-color: $b-grey;
+    }
+    &-container--default{
+        .select2-results__option{
+            font-size: 12px;
+            &--highlighted[aria-selected]{
+                background: $green;
+            }
+        }
+    }
+    
+}
 // CONTENT
 .content{
     padding: 60px 0;
@@ -129,7 +237,7 @@ a, a:hover, a:focus{
     &__info{
         border-radius: 50%;
         background: $b-grey;
-        color: $white;
+        color: $green;
 
         font-size: 10px;
         font-weight: 700;
@@ -146,17 +254,17 @@ a, a:hover, a:focus{
         cursor: pointer;
     }
 }
-
 // PANEL
 .panel{
     font-family: "Montserrat";
-
     margin-bottom: 40px;
+
     &__heading{
         position: relative;
         height: 130px;
         background: url("../images/photo_02.jpg") no-repeat center / cover;
 
+        margin-bottom: 10px;
         .panel__price{
             position: absolute;
             top: 10px;
@@ -175,7 +283,7 @@ a, a:hover, a:focus{
         border-radius: 2px;
     }
     &__user{
-        padding: 10px 0;
+        padding: 0 0 10px;
         &__image{
             width: 60px; 
             max-width: 100%; 
@@ -228,13 +336,124 @@ a, a:hover, a:focus{
             font-weight: 700;
         }
     }
+    &__offer{
+        margin: 15px 0;
+        font-size: 14px;
+    }
     &__favorite{
-        .fa{
+        text-align: right;
+        cursor: pointer;
+
+        &__icon{
+            text-align: center;
             border-radius: 4px;
-            background-color: rgb(239, 247, 234);
+            background-color: $b-grey;
+            
+            font-size: 12px;
             line-height: 28px;
             width: 28px;
-            text-align: center;
+
+            @include transition(.2s, linear, all );
+        }
+
+        &:hover{
+            .panel__favorite__icon{
+                color: $red;
+                background-color: darken($b-grey,5%);
+            }
+        }
+
+        &--active{
+            .fa{
+                color: $red;
+            }
+        }
+    }
+}
+// FORM
+.form{
+    &-radio{
+        input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            margin: 10px 0 0 20px;
+            &:checked + .form-radio__title:after {
+                opacity: 1;
+            }
+            &:focus + .form-radio__title:before {
+                opacity: 0.5;
+            }
+        }
+        &__title{
+            position: relative;
+            padding: 0 0 0 30px;
+            font-size: 12px;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $b-grey;
+                border-radius: 50%;
+                background: $lightblue;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 1px;
+                left: 3px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $green;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+                opacity: 0;
+                transition: .2s;
+            }
+        }
+    }
+}
+// FOOTER
+.footer{
+    border-top: 1px solid $d-grey;
+    .navbar-brand__logo {
+        width: 150px;
+    }
+    .copyright{
+        font-size: 12px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__contact{
+        margin-bottom: 20px;
+        a{
+            color: $green;
+            font-weight: 700;
+        }
+    }
+    &__pay{
+        height: 20px;
+        width: auto;
+        max-width: 100%;
+        margin: 0 10px;
+        &_mastercard{
+            height: 32px;
+        }
+    }
+    &__label{
+        text-transform: uppercase;
+        margin-top: 4px;
+    }
+    &__nav{
+        padding-left: 14px;
+        font-size: 14px;
+        li + li{
+            margin-top: 5px;
         }
     }
 }

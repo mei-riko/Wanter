@@ -5,11 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Wanter</title>
+    <link href="./bower_components/normalize-css/normalize.css" rel="stylesheet"/>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./bower_components/select2/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
     <link href="./css/style.min.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__navbar navbar navbar-expand">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="">Как мы работаем?</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Связаться с нами</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Контактная информация  </a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="personalPage" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">mail@mail.ru</a>
+                <div class="dropdown-menu" aria-labelledby="personalPage"><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-navbar">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="#"><img class="navbar-brand__logo" src="../images/logoSVG.svg"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=""><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item"><a class="nav-link" href="">Идеи и вдохновение</a></li>
+                <li class="nav-item"><a class="nav-link active" href="">Все заявки  </a></li>
+                <li class="nav-item"><a class="nav-link" href="">Оригинальные заявки</a></li>
+                <li class="nav-item"><a class="nav-link" href="">FAQ</a></li>
+              </ul><a class="btn header-navbar__btn" href="#">Создать заявку</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
     <footer></footer>
+    <script src="./bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="./bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>
