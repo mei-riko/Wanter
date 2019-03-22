@@ -78,10 +78,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _jquery2.default)(document).ready(function () {
     (0, _jquery2.default)('[data-toggle="tooltip"]').tooltip();
-    (0, _jquery2.default)('.js-placeholder-search').select2();
-    (0, _jquery2.default)('.js-placeholder-single').select2({
-        minimumResultsForSearch: 10
-    });
+
+    if ((0, _jquery2.default)('#indexSlider').length > 0) {
+        (0, _jquery2.default)('#indexSlider').owlCarousel({
+            items: 1,
+            autoHeight: true,
+            dots: false,
+            nav: true
+        });
+    }
+
+    if ((0, _jquery2.default)('.js-placeholder-search').length > 0) {
+        (0, _jquery2.default)('.js-placeholder-search').select2();
+    }
+    if ((0, _jquery2.default)('.js-placeholder-single').length > 0) {
+        (0, _jquery2.default)('.js-placeholder-single').select2({
+            minimumResultsForSearch: 10
+        });
+    }
 
     // filter
     (0, _jquery2.default)(".filter__item").on("click", function () {

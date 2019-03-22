@@ -9,11 +9,13 @@
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="./bower_components/select2/dist/css/select2.min.css" rel="stylesheet"/>
     <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./bower_components/OwlCarousel/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./bower_components/OwlCarousel/owl.theme.default.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
     <link href="./css/style.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
     <header>
       <div class="header-top">
         <div class="container">
@@ -25,7 +27,9 @@
             </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="personalPage" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">mail@mail.ru</a>
-                <div class="dropdown-menu" aria-labelledby="personalPage"><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a><a class="dropdown-item" href="#">Action </a></div>
+                <div class="dropdown-menu" aria-labelledby="personalPage"><a class="dropdown-item" href="#">Моя страница </a><a class="dropdown-item" href="#">Мои заявки </a><a class="dropdown-item" href="#">Сообщения </a><a class="dropdown-item" href="#">Уведомления </a><a class="dropdown-item" href="#">Избранное </a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Выход </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -47,10 +51,271 @@
         </div>
       </div>
     </header>
-    <footer></footer>
+    <div class="content content_slider owl-carousel owl-theme owl-index" id="indexSlider">
+      <div class="owl-index__item" style="background-image:url('./images/slider.jpg');">
+        <div class="container">
+          <div class="owl-index__item__title">Выполнение заявок по всему миру</div>
+          <div class="owl-index__item__offer">Сервис по поиску заказчиков и исполнителей оригинальных заявок. Хотите феерично встретить друга из аэропорта, или заказать коллаж для Инстаграм? Поможем найти исполнителя даже для самой оригинальной заявки!</div>
+          <div class="owl-index__item__form">
+            <div class="form form_row">
+              <input class="form__input" type="text" placeholder="Напишите, чем вам помочь?"/>
+              <button class="btn btn-primary form_row__btn">Готов начать!</button>
+              <div class="form__subtitle">Например: <span>спеть песню имениннице “Мохнатый шмель на душистый хмель”</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_category">
+      <div class="container-fluid">
+        <div class="row"><a class="content_category__col col-md-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/question.svg"/>
+              <div class="content_category__content">Задачи на расстоянии</div>
+            </div></a><a class="content_category__col col-md-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/brainstorming.svg"/>
+              <div class="content_category__content">Необычные задумки</div>
+            </div></a><a class="content_category__col col-md-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/rocket.svg"/>
+              <div class="content_category__content">Оригинальные поздравления</div>
+            </div></a><a class="content_category__col col-md-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/home.svg"/>
+              <div class="content_category__content">Бытовые задачи</div>
+            </div></a></div>
+      </div>
+    </div>
+    <div class="content content_maps">
+      <div class="container">
+        <h1 class="content__title content__title_heading-1">С Wanter границы существуют только на карте</h1>
+        <div class="row">
+          <div class="col-lg-7 col-xl-6">
+            <h2 class="content__title content__title_heading-2">Выполнение оригинальных заявок и&nbsp;поручений по России и всему миру!</h2>
+            <p class="content__offer">Хотите план отдыха в Австралии, или пальто из Нью-Йорка? А может нужно повесить полки на даче в Калуге, пока вы в Москве? Все просто: <a href="#">регистрируйтесь</a> и оставляйте заявку, а мы поможем найти человека для выполнения вашего поручения.</p>
+            <p class="content__offer"><a class="btn btn-primary" href="#">Зарегистироваться</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_tabs">
+      <div class="container">
+        <div class="content__title text-bold">Как стать частью команды Wanter?</div>
+        <div class="content__offer">Все заказчики и исполнители проходят процедуру проверки на сайте. А благодаря «Безопасной сделке» мы вернем деньги, если что-то пойдет не так.</div>
+        <ul class="nav nav-tabs nav_tabs-wanter justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item"><a class="nav-link active" href="#customer-slider" data-toggle="tab" role="tab">хочу создать заявку</a></li>
+          <li class="sep">—</li>
+          <li class="nav-item"><a class="nav-link" href="#performer-slider" data-toggle="tab" role="tab">хочу стать исполнителем</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="customer-slider" role="tabpanel">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">01</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">Создайте поручение</div>
+                    <div class="step-block__offer">Для корректного выполнения заявки создайте задание и подробно опишите суть задачи. Обязательно укажите тип поручения, место выполнения, сроки и стоимость</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">02</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">дождитесь откликов</div>
+                    <div class="step-block__offer">Получайте отклики от потенциальных исполнителей и выбирайте подходящего пользователя.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">03</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">Оплатите заявку</div>
+                    <div class="step-block__offer">Деньги спишутся с вашего счета и “заморозятся”. Средства будут перечислены исполнителю только после успешного выполнения заявки. </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">04</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">завершите сделку</div>
+                    <div class="step-block__offer">Сделка считается завершенной и оплачивается только после принятия результата заказчиком.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="performer-slider" role="tabpanel">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">01</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">Создайте поручение</div>
+                    <div class="step-block__offer">Для корректного выполнения заявки создайте задание и подробно опишите суть задачи. Обязательно укажите тип поручения, место выполнения, сроки и стоимость</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">02</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">дождитесь откликов</div>
+                    <div class="step-block__offer">Получайте отклики от потенциальных исполнителей и выбирайте подходящего пользователя.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">03</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">Оплатите заявку</div>
+                    <div class="step-block__offer">Деньги спишутся с вашего счета и “заморозятся”. Средства будут перечислены исполнителю только после успешного выполнения заявки. </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="step-block">
+                  <div class="step-block__number">04</div>
+                  <div class="step-block__content">
+                    <div class="step-block__title">завершите сделку</div>
+                    <div class="step-block__offer">Сделка считается завершенной и оплачивается только после принятия результата заказчиком.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_alert">
+      <div class="container">
+        <div class="content_alert__content">
+          <div class="content__title">Выполнение заявок без риска для заказчиков и исполнителей<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></div>
+          <p class="content__offer">Только реальные пользователи: все, как заказчики, так и исполнители, проходят процедуру тщательной проверки на сайте. Финансовые риски отсутствуют - если заявка не будет выполнена или результат вас не устроит, мы вернем вам деньги благодаря <a href="#">"Безопасной сделке"</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="content content_request">
+      <div class="container">
+        <h4 class="content__title">Эти заявки ищут своих исполнителей прямо сейчас<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></h4>
+        <div class="row">
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-md-8">
+                <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+                <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div><span class="panel__price">Цена 1000</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-md-8">
+                <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+                <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div><span class="panel__price">Цена 1000</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-md-8">
+                <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+                <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div><span class="panel__price">Цена 1000</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-md-8">
+                <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+                <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div><span class="panel__price">Цена 1000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_statictic">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <div class="counter d-flex align-items-center">
+            <div class="counter__number">75</div>
+            <div class="counter__content">
+              <div class="counter__content__title">Активных заявок</div>
+              <div class="counter__content__intro">ждут своих исполнителей</div>
+            </div>
+          </div>
+          <div class="counter d-flex align-items-center">
+            <div class="counter__number">586</div>
+            <div class="counter__content">
+              <div class="counter__content__title">Проверенных исполнителей</div>
+              <div class="counter__content__intro">готовы выполнить заявку</div>
+            </div>
+          </div>
+          <div class="counter d-flex align-items-center">
+            <div class="counter__number">75</div>
+            <div class="counter__content">
+              <div class="counter__content__title">Выполненных поручений</div>
+              <div class="counter__content__intro">оплачено по безопасной сделке</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content content_video">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12 col-xl-6 content_video__video">
+            <iframe width="100%" height="320" src="https://www.youtube.com/embed/LUrrGMYA3xo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+          </div>
+          <div class="col-md-12 col-xl-5 content_video__content">
+            <h4 class="content_video__title">Хотите больше узнать о Wanter? Посмотрите видео о проекте!</h4>
+            <p>Заказывайте выполнение заявок и оригинальных поручений в России и зарубежье: с сервисом оригинальных поручений Wanter мир стал ближе. Теперь вы можете оставить заявку на выполнение заданий в Москве, Париже, Рио, Осаке и других городах земного шара. </p>
+            <p>С проектом Wanter совершайте покупки, составляйте план отпуска или организовывайте оригинальный отдых, находясь в другом городе и не затрачивая больших усилий. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="row pt-5 pb-5"> 
+          <div class="col-sm-6 col-lg-4"> <a class="navbar-brand" href="#"><img class="navbar-brand__logo" src="./images/logoSVG.svg"/></a>
+            <p class="copyright">Инновационный сервис по выполнению <br/>поручений в России и за рубежом.</p>
+            <p class="footer__contact">E-mail: <a href="mailto:mail@thewanter.com">mail@thewanter.com</a></p>
+          </div>
+          <div class="col-sm-6 col-lg-4"> 
+            <p class="footer__label">Правила сервиса</p>
+            <ul class="footer__nav"> 
+              <li><a class="footer__nav__item" href="/terms-of-use" tabindex="-1">Пользовательское соглашение</a></li>
+              <li><a class="footer__nav__item" href="/privacy-policy" tabindex="-1">Политика конфиденциальности</a></li>
+              <li><a class="footer__nav__item" href="/security-policy" tabindex="-1">Политика безопасности</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-4"></div>
+          <div class="col-sm-12 pt-5"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
+        </div>
+      </div>
+    </footer>
     <script src="./bower_components/tether/dist/js/tether.min.js"></script>
     <script src="./bower_components/popper.js/dist/umd/popper.min.js"></script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./js/app.min.js"></script>
+    <script src="./bower_components/OwlCarousel/owl.carousel.min.js"></script>
   </body>
 </html>

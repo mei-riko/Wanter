@@ -1,6 +1,156 @@
 html(lang="ru", dir="ltr")
     include chunks/head.pug
     body
-        script(src="./js/jquery-3.3.1.min.js")
+        script(src="./js/jquery.min.js")
         include chunks/header.pug
+
+        #indexSlider.content.content_slider.owl-carousel.owl-theme.owl-index
+            .owl-index__item(style="background-image:url('./images/slider.jpg');")
+                .container
+                    .owl-index__item__title Выполнение заявок по всему миру
+                    .owl-index__item__offer Сервис по поиску заказчиков и исполнителей оригинальных заявок. Хотите феерично встретить друга из аэропорта, или заказать коллаж для Инстаграм? Поможем найти исполнителя даже для самой оригинальной заявки!
+                    .owl-index__item__form
+                        .form.form_row
+                            input.form__input(type="text" placeholder="Напишите, чем вам помочь?")
+                            button.btn.btn-primary.form_row__btn Готов начать!
+                            .form__subtitle Например: 
+                                span спеть песню имениннице “Мохнатый шмель на душистый хмель”
+        .content.content_category
+            .container-fluid
+                .row
+                    a.content_category__col.col-md-6.col-lg-3(href="#")
+                        .d-flex.align-items-center.justify-content-center
+                            img.content_category__image(src="./images/icons/question.svg")
+                            .content_category__content Задачи на расстоянии
+                    a.content_category__col.col-md-6.col-lg-3(href="#")
+                        .d-flex.align-items-center.justify-content-center
+                            img.content_category__image(src="./images/icons/brainstorming.svg")
+                            .content_category__content Необычные задумки
+                    a.content_category__col.col-md-6.col-lg-3(href="#")
+                        .d-flex.align-items-center.justify-content-center
+                            img.content_category__image(src="./images/icons/rocket.svg")
+                            .content_category__content Оригинальные поздравления
+                    a.content_category__col.col-md-6.col-lg-3(href="#")
+                        .d-flex.align-items-center.justify-content-center
+                            img.content_category__image(src="./images/icons/home.svg")
+                            .content_category__content Бытовые задачи
+        .content.content_maps
+            .container
+                h1.content__title.content__title_heading-1 С Wanter границы существуют только на карте
+                .row
+                    .col-lg-7.col-xl-6
+                        h2.content__title.content__title_heading-2 Выполнение оригинальных заявок и&nbsp;поручений по России и всему миру!
+                        p.content__offer Хотите план отдыха в Австралии, или пальто из Нью-Йорка? А может нужно повесить полки на даче в Калуге, пока вы в Москве? Все просто: 
+                            a(href="#") регистрируйтесь
+                            |  и оставляйте заявку, а мы поможем найти человека для выполнения вашего поручения.
+                        p.content__offer
+                            a.btn.btn-primary(href="#") Зарегистироваться
+        .content.content_tabs
+            .container
+                .content__title.text-bold Как стать частью команды Wanter?
+                .content__offer Все заказчики и исполнители проходят процедуру проверки на сайте. А благодаря «Безопасной сделке» мы вернем деньги, если что-то пойдет не так.
+                ul.nav.nav-tabs.nav_tabs-wanter.justify-content-center(id="myTab" role="tablist")
+                    li.nav-item
+                        a.nav-link.active(href="#customer-slider" data-toggle="tab" role="tab") хочу создать заявку
+                    li.sep —
+                    li.nav-item
+                        a.nav-link(href="#performer-slider" data-toggle="tab" role="tab") хочу стать исполнителем
+                .tab-content
+                    #customer-slider.tab-pane.active(role="tabpanel")
+                        .row
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 01
+                                    .step-block__content
+                                        .step-block__title Создайте поручение
+                                        .step-block__offer Для корректного выполнения заявки создайте задание и подробно опишите суть задачи. Обязательно укажите тип поручения, место выполнения, сроки и стоимость
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 02
+                                    .step-block__content
+                                        .step-block__title дождитесь откликов
+                                        .step-block__offer Получайте отклики от потенциальных исполнителей и выбирайте подходящего пользователя.
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 03
+                                    .step-block__content
+                                        .step-block__title Оплатите заявку
+                                        .step-block__offer Деньги спишутся с вашего счета и “заморозятся”. Средства будут перечислены исполнителю только после успешного выполнения заявки. 
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 04
+                                    .step-block__content
+                                        .step-block__title завершите сделку
+                                        .step-block__offer Сделка считается завершенной и оплачивается только после принятия результата заказчиком.
+                    #performer-slider.tab-pane(role="tabpanel")
+                        .row
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 01
+                                    .step-block__content
+                                        .step-block__title Создайте поручение
+                                        .step-block__offer Для корректного выполнения заявки создайте задание и подробно опишите суть задачи. Обязательно укажите тип поручения, место выполнения, сроки и стоимость
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 02
+                                    .step-block__content
+                                        .step-block__title дождитесь откликов
+                                        .step-block__offer Получайте отклики от потенциальных исполнителей и выбирайте подходящего пользователя.
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 03
+                                    .step-block__content
+                                        .step-block__title Оплатите заявку
+                                        .step-block__offer Деньги спишутся с вашего счета и “заморозятся”. Средства будут перечислены исполнителю только после успешного выполнения заявки. 
+                            .col-md-6
+                                .step-block
+                                    .step-block__number 04
+                                    .step-block__content
+                                        .step-block__title завершите сделку
+                                        .step-block__offer Сделка считается завершенной и оплачивается только после принятия результата заказчиком.
+        .content.content_alert
+            .container
+                .content_alert__content
+                    .content__title Выполнение заявок без риска для заказчиков и исполнителей
+                        span.content__info(data-toggle="tooltip" data-placement="right" title="Подсказка-информер") ?
+                    p.content__offer Только реальные пользователи: все, как заказчики, так и исполнители, проходят процедуру тщательной проверки на сайте. Финансовые риски отсутствуют - если заявка не будет выполнена или результат вас не устроит, мы вернем вам деньги благодаря 
+                        a(href="#") "Безопасной сделке"
+        .content.content_request
+            .container
+                h4.content__title Эти заявки ищут своих исполнителей прямо сейчас
+                    span.content__info(data-toggle="tooltip" data-placement="right" title="Подсказка-информер") ?
+                .row
+                    include chunks/panel-image-preview.pug
+                    include chunks/panel-image-preview.pug
+                    include chunks/panel-image-preview.pug
+                    include chunks/panel-image-preview.pug
+        .content.content_statictic
+            .container
+                .d-flex.justify-content-between
+                    .counter.d-flex.align-items-center
+                        .counter__number 75
+                        .counter__content
+                            .counter__content__title Активных заявок
+                            .counter__content__intro ждут своих исполнителей
+                    .counter.d-flex.align-items-center
+                        .counter__number 586
+                        .counter__content
+                            .counter__content__title Проверенных исполнителей
+                            .counter__content__intro готовы выполнить заявку
+                    .counter.d-flex.align-items-center
+                        .counter__number 75
+                        .counter__content
+                            .counter__content__title Выполненных поручений
+                            .counter__content__intro оплачено по безопасной сделке
+        .content.content_video
+            .container
+                .row.align-items-center
+                    .col-md-12.col-xl-6.content_video__video
+                        iframe(width="100%" height="320" src="https://www.youtube.com/embed/LUrrGMYA3xo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+                    .col-md-12.col-xl-5.content_video__content
+                        h4.content_video__title Хотите больше узнать о Wanter? Посмотрите видео о проекте!
+                        p Заказывайте выполнение заявок и оригинальных поручений в России и зарубежье: с сервисом оригинальных поручений Wanter мир стал ближе. Теперь вы можете оставить заявку на выполнение заданий в Москве, Париже, Рио, Осаке и других городах земного шара. 
+                        p С проектом Wanter совершайте покупки, составляйте план отпуска или организовывайте оригинальный отдых, находясь в другом городе и не затрачивая больших усилий. 
+
         include chunks/footer.pug
+        script(src="./bower_components/OwlCarousel/owl.carousel.min.js")
