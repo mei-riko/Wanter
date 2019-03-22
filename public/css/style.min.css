@@ -190,7 +190,7 @@ a:hover, a:focus {
   top: 100%;
   z-index: 99;
   padding: 20px;
-  background: #fff;
+  background: #eff7ea;
   border: 1px solid #ebebeb;
   width: 280px;
 }
@@ -209,21 +209,23 @@ a:hover, a:focus {
   width: 100%;
 }
 
+.filter-dropdown .form-radio .form-radio__title:before {
+  background: #fff;
+  border-color: #60ad31;
+}
+
 .filter-dropdown .form-radio + .form-radio {
   margin-top: 10px;
 }
 
-.filter-dropdown .form-radio + .filter-dropdown__link {
-  margin-top: 0;
-}
-
 .filter-dropdown__link {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 12px;
   font-weight: 700;
   text-decoration: underline;
-  float: right;
   color: #60ad31;
+  display: block;
+  text-align: right;
 }
 
 .select2 {
@@ -261,6 +263,7 @@ a:hover, a:focus {
   font-size: 40px;
   font-weight: 400;
   line-height: 44px;
+  margin-bottom: 80px;
 }
 
 .content__title_heading-2 {
@@ -386,7 +389,18 @@ a:hover, a:focus {
 }
 
 .content_maps {
-  padding: 150px 0;
+  position: relative;
+  padding: 120px 0;
+}
+
+.content_maps__image {
+  position: absolute;
+  bottom: 0px;
+  right: 60px;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+  background: url("../images/maps.png") no-repeat center bottom/800px;
 }
 
 .content_tabs .content__title {
@@ -499,6 +513,38 @@ a:hover, a:focus {
   background: -webkit-linear-gradient(left, #d3e9c5 0, #e4f1db 80%);
   background: -o-linear-gradient(left, #d3e9c5 0, #e4f1db 80%);
   background: linear-gradient(to right, #d3e9c5 0, #e4f1db 80%);
+  padding: 30px 0;
+}
+
+.content_statictic .counter {
+  font-family: "Montserrat";
+}
+
+.content_statictic .counter__number {
+  font-size: 90px;
+  font-family: "Open Sans";
+  color: #8b9f7f;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 20px;
+}
+
+.content_statictic .counter__content {
+  width: 210px;
+}
+
+.content_statictic .counter__content__title {
+  font-size: 16px;
+  color: #464844;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.content_statictic .counter__content__intro {
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 .content_video {
@@ -684,10 +730,10 @@ a:hover, a:focus {
 .form-radio__title:after {
   content: '';
   position: absolute;
-  top: 1px;
-  left: 3px;
-  width: 10px;
-  height: 10px;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #60ad31;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
