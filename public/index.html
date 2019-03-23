@@ -18,7 +18,7 @@
     <script src="./js/jquery.min.js"></script>
     <header class="sticky-top">
       <div class="header-top">
-        <div class="container">
+        <div class="container d-none d-md-block">
           <div class="header-top__navbar navbar navbar-expand">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item"><a class="nav-link" href="">Как мы работаем?</a></li>
@@ -38,8 +38,12 @@
       <div class="header-navbar">
         <div class="container">
           <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img class="navbar-brand__logo" src="../images/logoSVG.svg"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=""><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
               <ul class="navbar-nav ml-auto mr-auto">
                 <li class="nav-item"><a class="nav-link" href="/world.html">Идеи и вдохновение</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/request.html">Все заявки  </a></li>
@@ -55,8 +59,8 @@
       <div class="owl-index__item" style="background-image:url('./images/slider.jpg');">
         <div class="container">
           <div class="owl-index__item__title">Выполнение заявок по всему миру</div>
-          <div class="owl-index__item__offer">Сервис по поиску заказчиков и исполнителей оригинальных заявок. Хотите феерично встретить друга из аэропорта, или заказать коллаж для Инстаграм? Поможем найти исполнителя даже для самой оригинальной заявки!</div>
-          <div class="owl-index__item__form">
+          <div class="owl-index__item__offer">Сервис по поиску заказчиков и исполнителей оригинальных заявок. Хотите феерично встретить друга из аэропорта, или заказать коллаж для Инстаграм? Поможем найти исполнителя даже для самой оригинальной заявки!</div><a class="btn btn-primary d-md-none" href="#">Создать заявку</a>
+          <div class="owl-index__item__form d-none d-md-block">
             <div class="form form_row clearfix">
               <input class="form__input" type="text" placeholder="Напишите, чем вам помочь?"/>
               <button class="btn btn-primary form_row__btn">Готов начать!</button>
@@ -68,17 +72,17 @@
     </div>
     <div class="content content_category">
       <div class="container-fluid">
-        <div class="row"><a class="content_category__col col-md-6 col-lg-3" href="#">
-            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/question.svg"/>
+        <div class="row"><a class="content_category__col col-sm-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-lg-center"><img class="content_category__image" src="./images/icons/question.svg"/>
               <div class="content_category__content">Задачи на расстоянии</div>
-            </div></a><a class="content_category__col col-md-6 col-lg-3" href="#">
-            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/brainstorming.svg"/>
+            </div></a><a class="content_category__col col-sm-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-lg-center"><img class="content_category__image" src="./images/icons/brainstorming.svg"/>
               <div class="content_category__content">Необычные задумки</div>
-            </div></a><a class="content_category__col col-md-6 col-lg-3" href="#">
-            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/rocket.svg"/>
+            </div></a><a class="content_category__col col-sm-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-lg-center"><img class="content_category__image" src="./images/icons/rocket.svg"/>
               <div class="content_category__content">Оригинальные поздравления</div>
-            </div></a><a class="content_category__col col-md-6 col-lg-3" href="#">
-            <div class="d-flex align-items-center justify-content-center"><img class="content_category__image" src="./images/icons/home.svg"/>
+            </div></a><a class="content_category__col col-sm-6 col-lg-3" href="#">
+            <div class="d-flex align-items-center justify-content-lg-center"><img class="content_category__image" src="./images/icons/home.svg"/>
               <div class="content_category__content">Бытовые задачи</div>
             </div></a></div>
       </div>
@@ -93,7 +97,7 @@
             <p class="content__offer"><a class="btn btn-primary" href="#">Зарегистироваться</a></p>
           </div>
         </div>
-        <div class="content_maps__image"></div>
+        <div class="content_maps__image d-none d-lg-block"></div>
       </div>
     </div>
     <div class="content content_tabs">
@@ -108,7 +112,7 @@
         <div class="tab-content">
           <div class="tab-pane active" id="customer-slider" role="tabpanel">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">01</div>
                   <div class="step-block__content">
@@ -117,7 +121,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">02</div>
                   <div class="step-block__content">
@@ -126,7 +130,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">03</div>
                   <div class="step-block__content">
@@ -135,7 +139,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">04</div>
                   <div class="step-block__content">
@@ -148,7 +152,7 @@
           </div>
           <div class="tab-pane" id="performer-slider" role="tabpanel">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">01</div>
                   <div class="step-block__content">
@@ -157,7 +161,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">02</div>
                   <div class="step-block__content">
@@ -166,7 +170,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">03</div>
                   <div class="step-block__content">
@@ -175,7 +179,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-sm-6">
                 <div class="step-block">
                   <div class="step-block__number">04</div>
                   <div class="step-block__content">
@@ -192,7 +196,7 @@
     <div class="content content_alert">
       <div class="container">
         <div class="content_alert__content">
-          <div class="content__title">Выполнение заявок без риска для заказчиков и исполнителей<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></div>
+          <div class="content__title">Выполнение заявок без риска для заказчиков и&nbsp;исполнителей<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></div>
           <p class="content__offer">Только реальные пользователи: все, как заказчики, так и исполнители, проходят процедуру тщательной проверки на сайте. Финансовые риски отсутствуют - если заявка не будет выполнена или результат вас не устроит, мы вернем вам деньги благодаря <a href="#">"Безопасной сделке"</a></p>
         </div>
       </div>
@@ -203,8 +207,8 @@
         <div class="row">
           <div class="col-md-6 panel panel_preview">
             <div class="row">
-              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
-              <div class="col-md-8">
+              <div class="col-4 pr-0"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-8">
                 <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
                   <p class="panel__info__place">Россия, Москва</p>
                 </div>
@@ -215,8 +219,8 @@
           </div>
           <div class="col-md-6 panel panel_preview">
             <div class="row">
-              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
-              <div class="col-md-8">
+              <div class="col-4 pr-0"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-8">
                 <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
                   <p class="panel__info__place">Россия, Москва</p>
                 </div>
@@ -227,8 +231,8 @@
           </div>
           <div class="col-md-6 panel panel_preview">
             <div class="row">
-              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
-              <div class="col-md-8">
+              <div class="col-4 pr-0"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-8">
                 <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
                   <p class="panel__info__place">Россия, Москва</p>
                 </div>
@@ -239,8 +243,8 @@
           </div>
           <div class="col-md-6 panel panel_preview">
             <div class="row">
-              <div class="col-md-4"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
-              <div class="col-md-8">
+              <div class="col-4 pr-0"><img class="panel__image img-fluid" src="./images/cat2.jpg"/></div>
+              <div class="col-8">
                 <div class="panel__info"><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
                   <p class="panel__info__place">Россия, Москва</p>
                 </div>
@@ -252,7 +256,7 @@
         </div>
       </div>
     </div>
-    <div class="content content_statictic">
+    <div class="content content_statictic d-none d-lg-block">
       <div class="container">
         <div class="d-flex justify-content-between">
           <div class="counter d-flex align-items-center">
@@ -282,11 +286,11 @@
     <div class="content content_video">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-12 col-xl-6 content_video__video">
+          <div class="col-md-12 col-lg-6 col-xl-6 content_video__video">
             <iframe width="100%" height="320" src="https://www.youtube.com/embed/LUrrGMYA3xo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
           </div>
-          <div class="col-md-12 col-xl-5 content_video__content">
-            <h4 class="content_video__title">Хотите больше узнать о Wanter? Посмотрите видео о проекте!</h4>
+          <div class="col-md-12 col-lg-6 col-xl-5 content_video__content">
+            <h4 class="content_video__title">Хотите больше узнать о Wanter? Посмотрите видео о&nbsp;проекте!</h4>
             <p>Заказывайте выполнение заявок и оригинальных поручений в России и зарубежье: с сервисом оригинальных поручений Wanter мир стал ближе. Теперь вы можете оставить заявку на выполнение заданий в Москве, Париже, Рио, Осаке и других городах земного шара. </p>
             <p>С проектом Wanter совершайте покупки, составляйте план отпуска или организовывайте оригинальный отдых, находясь в другом городе и не затрачивая больших усилий. </p>
           </div>
@@ -309,7 +313,7 @@
             </ul>
           </div>
           <div class="col-sm-6 col-lg-4"></div>
-          <div class="col-sm-12 pt-5"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
+          <div class="col-sm-12 pt-lg-5 pt-3"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
         </div>
       </div>
     </footer>

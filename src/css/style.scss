@@ -44,12 +44,13 @@ a{
 }
 // BUTTON
 .btn{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: .5px;
     line-height: 52px;
     height: 55px;
     padding: 0 35px;
+    max-width: 100%;
     &-primary{
         color: $white;
         background: $green;
@@ -123,15 +124,22 @@ a{
 
     .navbar{
         padding: 30px 0;
+        &-toggler{
+            background: $lightblue;
+        }
     }
     .navbar-brand{
         &__logo{
             width: 150px;
         }
     }
+    .navbar-collapse{
+        text-align: right;
+    }
     .navbar-nav{
+        text-align: right;
         .nav-link{
-            padding: 0 15px;
+            padding: 20px 0 0;
             color: $grey;
             font-size: 14px;
             font-weight: 300;
@@ -156,6 +164,8 @@ a{
         height: 35px;
         padding: 0 15px;
 
+        margin-top: 30px;
+
         &:hover,
         &:focus{
             color: $white;
@@ -167,6 +177,9 @@ a{
 .filter{
     border-bottom: 1px solid $b-grey;
     padding: 14px 0 4px;
+
+    overflow-x: scroll;
+
     &__row{
         // flex-wrap: wrap;
     }
@@ -296,7 +309,7 @@ a{
     }
     &__title{
         font-family: 'Montserrat', sans-serif;
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 300;
 
         position: relative;
@@ -309,15 +322,15 @@ a{
             font-weight: 700;
         }
         &_heading-1{
-            font-size: 40px;
+            font-size: 24px;
             font-weight: 400;
-            line-height: 44px;
-            margin-bottom: 80px;
+            line-height: 32px;
+            margin-bottom: 40px;
         }
         &_heading-2{
-            font-size: 24px;
-            line-height: 34px;
-            margin-bottom: 40px;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 20px;
         }
         &_heading-3{
             font-size: 18px;
@@ -377,14 +390,14 @@ a{
         .owl-index{
             &__item{
                 text-align: center;
-                padding: 180px 0 220px;
+                padding: 60px 0 80px;
 
                 background: url("../images/slider.jpg") no-repeat center / cover;
                 &__title{
                     color: $white;
                     
                     font-family: 'Montserrat', sans-serif;
-                    font-size: 48px;
+                    font-size: 22px;
                     font-weight: 700;
 
                     margin-bottom: 25px;
@@ -393,7 +406,7 @@ a{
                     font-size: 14px;
                     font-family: "Montserrat";
                     color: $white;
-                    line-height: 1.8;
+                    line-height: 22px;
 
                     margin:0 auto 50px;
 
@@ -468,7 +481,6 @@ a{
     // MAPS
     &_maps{
         position: relative;
-        padding: 120px 0;
         &__image{
             position: absolute;
             bottom: 0px;
@@ -477,14 +489,15 @@ a{
             width: 50%;
             z-index: -1;
 
-            background: url("../images/maps.png") no-repeat center bottom/ 800px;
+            background: url("../images/maps.png") no-repeat right center/ 500px;
         }
     }
     // TABS
     &_tabs{
+        padding-top: 0;
         .content__title{
             display: block;
-            padding: 0 30px;
+            padding: 0;
             margin-bottom: 30px;
 
             text-align: center;
@@ -511,6 +524,7 @@ a{
                 background-color: transparent;
                 border-color: transparent;
                 outline: none;
+                margin-bottom: 10px;
                 &:hover,
                 &:focus{
                     background-color: transparent;
@@ -541,18 +555,20 @@ a{
             }
 
             .sep{
+                display: none;
                 padding: 0 15px;
             }
         }
     }
     // ALERT
     &_alert{
-        padding-bottom: 120px;
+        padding-top: 0px;
+        padding-bottom: 30px;
         &__content{
             width: 1080px;
             max-width: 100%;
 
-            padding: 40px 60px;
+            padding: 30px 20px;
             margin: 0 auto;
 
             color: $white;
@@ -566,7 +582,7 @@ a{
                 margin-bottom: 20px;
             }
             .content__offer{
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 300;
 
                 color: $white;
@@ -583,7 +599,8 @@ a{
     }
     // TASK
     &_request{
-        padding-top: 100px;
+        padding-top: 60px;
+        padding-bottom: 20px;
         background: $l-green;
         background: linear-gradient(to right, darken($l-green,4%) 0, $l-green 100%);        
     }
@@ -596,7 +613,7 @@ a{
         .counter{
             font-family: "Montserrat";
             &__number{
-                font-size: 90px;
+                font-size: 70px;
                 font-family: "Open Sans";
                 color: rgb(139, 159, 127);
                 font-weight: bold;
@@ -605,7 +622,7 @@ a{
                 margin-right: 20px;
             }
             &__content{
-                width: 210px;
+                width: 170px;
                 &__title{
                     font-size: 16px;
                     color: rgb(70, 72, 68);
@@ -624,23 +641,24 @@ a{
     }
     // VIDEO BLOCK
     &_video{
-        padding: 100px 0;
+        padding: 40px 0;
         font-family: "Montserrat", sans-serif;
 
         &__content{
+            margin-top: 40px;
             padding-left: 20px;
         }
         &__title{
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 300;
             line-height: 1.4;
 
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         p{
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 300;
-            line-height: 22px;
+            line-height: 18px;
 
             & + p{
                 margin-top: 20px;
@@ -656,7 +674,6 @@ a{
 .panel{
     font-family: "Montserrat";
     margin-bottom: 40px;
-
     &__heading{
         position: relative;
         height: 130px;
@@ -754,7 +771,7 @@ a{
         }
         &__title {
             display: block;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
 
             color: $grey;
@@ -773,7 +790,7 @@ a{
     }
     &__offer{
         margin: 15px 0;
-        font-size: 14px;
+        font-size: 12px;
     }
     &__favorite{
         text-align: right;
@@ -931,7 +948,8 @@ a{
 // STEP
 .step-block{
     position: relative;
-    margin-bottom: 80px;
+    overflow: hidden;
+    margin-bottom: 40px;
 
     font-family: 'Montserrat', sans-serif;
     &__number{
@@ -948,7 +966,7 @@ a{
         position: relative;
         z-index: 11;
 
-        padding-left: 170px;
+        padding-left: 0px;
     }
     &__title{
         font-size: 16px;
@@ -973,6 +991,8 @@ a{
         font-size: 12px;
         margin-top: 20px;
         margin-bottom: 20px;
+
+        display: block;
     }
     &__contact{
         margin-bottom: 20px;
@@ -982,12 +1002,12 @@ a{
         }
     }
     &__pay{
-        height: 20px;
+        height: 12px;
         width: auto;
         max-width: 100%;
-        margin: 0 10px;
+        margin: 10px;
         &_mastercard{
-            height: 32px;
+            height: 22px;
         }
     }
     &__label{
@@ -1002,3 +1022,5 @@ a{
         }
     }
 }
+
+@import "media.scss";

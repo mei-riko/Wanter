@@ -18,7 +18,7 @@
     <script src="./js/jquery.min.js"></script>
     <header class="sticky-top">
       <div class="header-top">
-        <div class="container">
+        <div class="container d-none d-md-block">
           <div class="header-top__navbar navbar navbar-expand">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item"><a class="nav-link" href="">Как мы работаем?</a></li>
@@ -38,8 +38,12 @@
       <div class="header-navbar">
         <div class="container">
           <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img class="navbar-brand__logo" src="../images/logoSVG.svg"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=""><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
               <ul class="navbar-nav ml-auto mr-auto">
                 <li class="nav-item"><a class="nav-link" href="/world.html">Идеи и вдохновение</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/request.html">Все заявки  </a></li>
@@ -84,7 +88,7 @@
       <div class="container">
         <h1 class="content__title">Вдохновение для заявок<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></h1>
         <div class="row">
-          <div class="col-md-6 panel panel_preview">
+          <div class="col-sm-6 panel panel_preview">
             <div class="row">
               <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
               <div class="col-md-7">
@@ -95,7 +99,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 panel panel_preview">
+          <div class="col-sm-6 panel panel_preview">
             <div class="row">
               <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
               <div class="col-md-7">
@@ -106,7 +110,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 panel panel_preview">
+          <div class="col-sm-6 panel panel_preview">
             <div class="row">
               <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
               <div class="col-md-7">
@@ -117,7 +121,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 panel panel_preview">
+          <div class="col-sm-6 panel panel_preview">
             <div class="row">
               <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
               <div class="col-md-7">
@@ -128,7 +132,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 panel panel_preview">
+          <div class="col-sm-6 panel panel_preview">
             <div class="row">
               <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
               <div class="col-md-7">
@@ -139,7 +143,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 panel panel_preview">
+          <div class="col-sm-6 panel panel_preview">
             <div class="row">
               <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
               <div class="col-md-7">
@@ -176,7 +180,7 @@
             </ul>
           </div>
           <div class="col-sm-6 col-lg-4"></div>
-          <div class="col-sm-12 pt-5"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
+          <div class="col-sm-12 pt-lg-5 pt-3"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
         </div>
       </div>
     </footer>

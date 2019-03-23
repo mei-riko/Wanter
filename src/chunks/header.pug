@@ -1,6 +1,6 @@
 header.sticky-top
     .header-top
-        .container
+        .container.d-none.d-md-block
             .header-top__navbar.navbar.navbar-expand
                 ul.navbar-nav.mr-auto
                     li.nav-item
@@ -25,9 +25,10 @@ header.sticky-top
             nav.navbar.navbar-expand-lg
                 a.navbar-brand(href="/")
                     img.navbar-brand__logo(src="../images/logoSVG.svg")
-                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="")
-                    span.navbar-toggler-icon
-                .collapse.navbar-collapse
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="")
+                    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false")
+                        path(stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22")
+                .collapse.navbar-collapse#navbarContent
                     ul.navbar-nav.ml-auto.mr-auto
                         li.nav-item
                             a.nav-link(href="/world.html") Идеи и вдохновение
