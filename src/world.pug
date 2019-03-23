@@ -16,16 +16,15 @@ html(lang='ru', dir='ltr')
                                     option Начните вводить...
                                 a.filter-dropdown__link(href="#") Применить
                             .filter__item#filter-type.filter__item--active
-                                span.filter__item__title Тип заявки
-                                span.filter__item__content Сюрприз
+                                span.filter__item__title Тематика
+                                span.filter__item__content Необычные задумки
                             .filter-dropdown(data-filter="filter-type")
                                 select.form-control.js-placeholder-single
-                                    option Поручение
-                                    option Покупка
-                                    option Сюрприз
-                                    option Творчество
-                                    option Отправка
-                                    option Прочее
+                                    option Задачи на расстоянии
+                                    option Необычные задумки
+                                    option Поздравления
+                                    option Бытовые задачи
+                                    option Вдохновиться!
                                 a.filter-dropdown__link(href="#") Применить
                     .col.d-none.d-lg-block.text-right
                         .filter__offer Отклики на заявки доступны для 
@@ -33,12 +32,25 @@ html(lang='ru', dir='ltr')
                             |  пользователей
         .content
             .container
-                h1.content__title Необычные заявки, которые исполнили с Wanter
+                h1.content__title Вдохновение для заявок
                     span.content__info(data-toggle="tooltip" data-placement="right" title="Подсказка-информер") ?
                 .row
-                    include chunks/panel-image-original.pug
-                    include chunks/panel-image-original.pug
-                    include chunks/panel-image-original.pug
-                    include chunks/panel-image-original.pug
+                    include chunks/panel-image-world.pug
+                    include chunks/panel-image-world.pug
+                    include chunks/panel-image-world.pug
+                    include chunks/panel-image-world.pug
+                    include chunks/panel-image-world.pug
+                    include chunks/panel-image-world.pug
+                .pagination
+                    li.prev.disabled
+                        span «
+                    li.active
+                        a(href="#") 1
+                    li
+                        a(href="#") 2
+                    li
+                        a(href="#") 3
+                    li.next
+                        a(href="#") »
         include chunks/footer.pug
         script(src="./bower_components/select2/dist/js/select2.min.js")

@@ -114,6 +114,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _jquery2.default)(".filter__item#filter-security").on("click", function () {
         (0, _jquery2.default)(this).toggleClass("filter__item--active");
     });
+
+    (0, _jquery2.default)(window).scroll(function () {
+        if ((0, _jquery2.default)(this).scrollTop() > 150) {
+            // $('#scroll_top').css('opacity','1');
+            (0, _jquery2.default)('.sticky-top').addClass("scroll");
+            (0, _jquery2.default)('.sticky-top .header-top').slideUp();
+        } else if ((0, _jquery2.default)(this).scrollTop() < 60) {
+            // $('#scroll_top').css('opacity','0');
+            (0, _jquery2.default)('.sticky-top').removeClass("scroll");
+            (0, _jquery2.default)('.sticky-top .header-top').slideDown();
+        }
+    });
 });
 
 /***/ }),

@@ -1,0 +1,189 @@
+
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Wanter</title>
+    <link href="./bower_components/normalize-css/normalize.css" rel="stylesheet"/>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./bower_components/select2/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./bower_components/OwlCarousel/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./bower_components/OwlCarousel/owl.theme.default.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <link href="./css/style.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="./js/jquery.min.js"></script>
+    <header class="sticky-top">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__navbar navbar navbar-expand">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="">Как мы работаем?</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Связаться с нами</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Контактная информация  </a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="personalPage" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">mail@mail.ru</a>
+                <div class="dropdown-menu" aria-labelledby="personalPage"><a class="dropdown-item" href="#">Моя страница </a><a class="dropdown-item" href="#">Мои заявки </a><a class="dropdown-item" href="#">Сообщения </a><a class="dropdown-item" href="#">Уведомления </a><a class="dropdown-item" href="#">Избранное </a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Выход </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-navbar">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img class="navbar-brand__logo" src="../images/logoSVG.svg"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=""><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/world.html">Идеи и вдохновение</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/request.html">Все заявки  </a></li>
+                <li class="nav-item"><a class="nav-link" href="/original.html">Оригинальные заявки</a></li>
+                <li class="nav-itemhtml"><a class="nav-link" href="/faq.html">FAQ</a></li>
+              </ul><a class="btn header-navbar__btn" href="#">Создать заявку</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="filter">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="filter__row d-flex flex-row">
+              <div class="filter__item" id="filter-place"><span class="filter__item__title">Любой город</span></div>
+              <div class="filter-dropdown" data-filter="filter-place">
+                <select class="form-control js-placeholder-search">
+                  <option>Начните вводить...</option>
+                </select><a class="filter-dropdown__link" href="#">Применить</a>
+              </div>
+              <div class="filter__item filter__item--active" id="filter-type"><span class="filter__item__title">Тематика</span><span class="filter__item__content">Необычные задумки</span></div>
+              <div class="filter-dropdown" data-filter="filter-type">
+                <select class="form-control js-placeholder-single">
+                  <option>Задачи на расстоянии</option>
+                  <option>Необычные задумки</option>
+                  <option>Поздравления</option>
+                  <option>Бытовые задачи</option>
+                  <option>Вдохновиться!</option>
+                </select><a class="filter-dropdown__link" href="#">Применить</a>
+              </div>
+            </div>
+          </div>
+          <div class="col d-none d-lg-block text-right">
+            <div class="filter__offer">Отклики на заявки доступны для <a href="#">зарегистрированных</a> пользователей</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <h1 class="content__title">Вдохновение для заявок<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></h1>
+        <div class="row">
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
+              <div class="col-md-7">
+                <div class="panel__info"><a class="panel__info__title" href="#">Работайте с региональными архивами, не вставая из собственного кресла!</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__offer">Для этого вам нужны добровольные и квалифицированные помощники, которых мы и поможем вам найти.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
+              <div class="col-md-7">
+                <div class="panel__info"><a class="panel__info__title" href="#">Работайте с региональными архивами, не вставая из собственного кресла!</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__offer">Для этого вам нужны добровольные и квалифицированные помощники, которых мы и поможем вам найти.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
+              <div class="col-md-7">
+                <div class="panel__info"><a class="panel__info__title" href="#">Работайте с региональными архивами, не вставая из собственного кресла!</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__offer">Для этого вам нужны добровольные и квалифицированные помощники, которых мы и поможем вам найти.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
+              <div class="col-md-7">
+                <div class="panel__info"><a class="panel__info__title" href="#">Работайте с региональными архивами, не вставая из собственного кресла!</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__offer">Для этого вам нужны добровольные и квалифицированные помощники, которых мы и поможем вам найти.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
+              <div class="col-md-7">
+                <div class="panel__info"><a class="panel__info__title" href="#">Работайте с региональными архивами, не вставая из собственного кресла!</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__offer">Для этого вам нужны добровольные и квалифицированные помощники, которых мы и поможем вам найти.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 panel panel_preview">
+            <div class="row">
+              <div class="col-md-5"><img class="panel__image img-fluid" src="./images/pexels-photo-2.jpeg"/><span class="panel__label">Необычные задумки</span></div>
+              <div class="col-md-7">
+                <div class="panel__info"><a class="panel__info__title" href="#">Работайте с региональными архивами, не вставая из собственного кресла!</a>
+                  <p class="panel__info__place">Россия, Москва</p>
+                </div>
+                <div class="panel__offer">Для этого вам нужны добровольные и квалифицированные помощники, которых мы и поможем вам найти.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <li class="prev disabled"><span>«</span></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li class="next"><a href="#">»</a></li>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="row pt-5 pb-5"> 
+          <div class="col-sm-6 col-lg-4"> <a class="navbar-brand" href="#"><img class="navbar-brand__logo" src="./images/logoSVG.svg"/></a>
+            <p class="copyright">Инновационный сервис по выполнению <br/>поручений в России и за рубежом.</p>
+            <p class="footer__contact">E-mail: <a href="mailto:mail@thewanter.com">mail@thewanter.com</a></p>
+          </div>
+          <div class="col-sm-6 col-lg-4"> 
+            <p class="footer__label">Правила сервиса</p>
+            <ul class="footer__nav"> 
+              <li><a class="footer__nav__item" href="/terms-of-use" tabindex="-1">Пользовательское соглашение</a></li>
+              <li><a class="footer__nav__item" href="/privacy-policy" tabindex="-1">Политика конфиденциальности</a></li>
+              <li><a class="footer__nav__item" href="/security-policy" tabindex="-1">Политика безопасности</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-4"></div>
+          <div class="col-sm-12 pt-5"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
+        </div>
+      </div>
+    </footer>
+    <script src="./bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="./bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/app.min.js"></script>
+    <script src="./bower_components/select2/dist/js/select2.min.js"></script>
+  </body>
+</html>

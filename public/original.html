@@ -73,22 +73,6 @@
                   <option>Прочее</option>
                 </select><a class="filter-dropdown__link" href="#">Применить</a>
               </div>
-              <div class="filter__item" id="filter-status"><span class="filter__item__title">Статус заявки</span></div>
-              <div class="filter-dropdown" data-filter="filter-status">
-                <label class="form-radio">
-                  <input type="radio" name="status" checked="checked"/><span class="form-radio__title">Опубликована</span>
-                </label>
-                <label class="form-radio">
-                  <input type="radio" name="status"/><span class="form-radio__title">Исполняется</span>
-                </label>
-                <label class="form-radio">
-                  <input type="radio" name="status"/><span class="form-radio__title">На проверке</span>
-                </label>
-                <label class="form-radio">
-                  <input type="radio" name="status"/><span class="form-radio__title">Завершена</span>
-                </label><a class="filter-dropdown__link" href="#">Применить</a>
-              </div>
-              <div class="filter__item" id="filter-security"><span class="filter__item__title">Только безопасная сделка</span></div>
             </div>
           </div>
           <div class="col d-none d-lg-block text-right">
@@ -99,162 +83,105 @@
     </div>
     <div class="content">
       <div class="container">
-        <h1 class="content__title">Заявки и предложения<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></h1>
+        <h1 class="content__title">Необычные заявки, которые исполнили с Wanter<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></h1>
         <div class="row">
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
-            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
+          <div class="col-md-6 col-lg-4 panel panel_wanter">
+            <div class="panel__heading panel__heading_lg" style="background-image: url('../images/pexels-photo.jpeg')"><span class="panel__price">Цена 1000</span></div>
             <div class="panel__user row align-items-center">
-              <div class="col-3"><img class="panel__user__image" src="../images/male.png"/></div>
-              <div class="col-9"><a class="panel__user__name" href="#">Андрей П.</a>
+              <div class="col-6">
+                <div class="panel__user__label"> <span>Заказчик</span></div><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+              <div class="col-6">
+                <div class="panel__user__label"><span>Исполнитель</span></div><a class="panel__user__name" href="#">Вероника С.</a>
                 <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
               </div>
             </div>
             <div class="panel__info">
               <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-            </div>
-            <div class="panel__footer row align-items-center">
-              <div class="col-md-6">
-                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
-              </div>
-              <div class="col-md-6">
-                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
-            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
-            <div class="panel__user row align-items-center">
-              <div class="col-3"><img class="panel__user__image" src="../images/male.png"/></div>
-              <div class="col-9"><a class="panel__user__name" href="#">Андрей П.</a>
-                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
-              </div>
-            </div>
-            <div class="panel__info">
-              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-            </div>
-            <div class="panel__footer row align-items-center">
-              <div class="col-md-6">
-                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
-              </div>
-              <div class="col-md-6">
-                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
-            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
-            <div class="panel__user row align-items-center">
-              <div class="col-3"><img class="panel__user__image" src="../images/male.png"/></div>
-              <div class="col-9"><a class="panel__user__name" href="#">Андрей П.</a>
-                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
-              </div>
-            </div>
-            <div class="panel__info">
-              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-            </div>
-            <div class="panel__footer row align-items-center">
-              <div class="col-md-6">
-                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
-              </div>
-              <div class="col-md-6">
-                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
-            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
-            <div class="panel__user row align-items-center">
-              <div class="col-3"><img class="panel__user__image" src="../images/male.png"/></div>
-              <div class="col-9"><a class="panel__user__name" href="#">Андрей П.</a>
-                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
-              </div>
-            </div>
-            <div class="panel__info">
-              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-            </div>
-            <div class="panel__footer row align-items-center">
-              <div class="col-md-6">
-                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
-              </div>
-              <div class="col-md-6">
-                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
-            <div class="panel__user row align-items-center">
-              <div class="col-lg-3"><img class="panel__user__image" src="../images/female.png"/></div>
-              <div class="col-lg-9"><a class="panel__user__name" href="#">Руслана К.</a>
-                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
-              </div>
-            </div>
-            <div class="panel__info">
-              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-              <div class="panel__data">Осталось: <span>23.01.2019</span></div>
               <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div>
             </div>
             <div class="panel__footer row align-items-center">
-              <div class="col-lg-6"><span class="panel__price">Цена 670</span></div>
-              <div class="col-lg-6">
-                <div class="panel__favorite panel__favorite--active"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
-            <div class="panel__heading"><span class="panel__price">Цена 1000</span></div>
-            <div class="panel__user row align-items-center">
-              <div class="col-3"><img class="panel__user__image" src="../images/male.png"/></div>
-              <div class="col-9"><a class="panel__user__name" href="#">Андрей П.</a>
-                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
-              </div>
-            </div>
-            <div class="panel__info">
-              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-            </div>
-            <div class="panel__footer row align-items-center">
               <div class="col-md-6">
-                <div class="panel__data">Осталось: <span>23.01.2019</span></div>
+                <div class="panel__data">Дата исполнения: <span>23.01.2019</span></div>
               </div>
               <div class="col-md-6">
                 <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
+          <div class="col-md-6 col-lg-4 panel panel_wanter">
+            <div class="panel__heading panel__heading_lg" style="background-image: url('../images/pexels-photo.jpeg')"><span class="panel__price">Цена 1000</span></div>
             <div class="panel__user row align-items-center">
-              <div class="col-lg-3"><img class="panel__user__image" src="../images/female.png"/></div>
-              <div class="col-lg-9"><a class="panel__user__name" href="#">Руслана К.</a>
+              <div class="col-6">
+                <div class="panel__user__label"> <span>Заказчик</span></div><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+              <div class="col-6">
+                <div class="panel__user__label"><span>Исполнитель</span></div><a class="panel__user__name" href="#">Вероника С.</a>
                 <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
               </div>
             </div>
             <div class="panel__info">
               <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-              <div class="panel__data">Осталось: <span>23.01.2019</span></div>
               <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div>
             </div>
             <div class="panel__footer row align-items-center">
-              <div class="col-lg-6"><span class="panel__price">Цена 670</span></div>
-              <div class="col-lg-6">
-                <div class="panel__favorite panel__favorite--active"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
+              <div class="col-md-6">
+                <div class="panel__data">Дата исполнения: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 panel panel_wanter">
+          <div class="col-md-6 col-lg-4 panel panel_wanter">
+            <div class="panel__heading panel__heading_lg" style="background-image: url('../images/pexels-photo.jpeg')"><span class="panel__price">Цена 1000</span></div>
             <div class="panel__user row align-items-center">
-              <div class="col-lg-3"><img class="panel__user__image" src="../images/female.png"/></div>
-              <div class="col-lg-9"><a class="panel__user__name" href="#">Руслана К.</a>
+              <div class="col-6">
+                <div class="panel__user__label"> <span>Заказчик</span></div><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+              <div class="col-6">
+                <div class="panel__user__label"><span>Исполнитель</span></div><a class="panel__user__name" href="#">Вероника С.</a>
                 <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
               </div>
             </div>
             <div class="panel__info">
               <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
-              <div class="panel__data">Осталось: <span>23.01.2019</span></div>
               <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div>
             </div>
             <div class="panel__footer row align-items-center">
-              <div class="col-lg-6"><span class="panel__price">Цена 670</span></div>
-              <div class="col-lg-6">
-                <div class="panel__favorite panel__favorite--active"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
+              <div class="col-md-6">
+                <div class="panel__data">Дата исполнения: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 panel panel_wanter">
+            <div class="panel__heading panel__heading_lg" style="background-image: url('../images/pexels-photo.jpeg')"><span class="panel__price">Цена 1000</span></div>
+            <div class="panel__user row align-items-center">
+              <div class="col-6">
+                <div class="panel__user__label"> <span>Заказчик</span></div><a class="panel__user__name" href="#">Андрей П.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+              <div class="col-6">
+                <div class="panel__user__label"><span>Исполнитель</span></div><a class="panel__user__name" href="#">Вероника С.</a>
+                <div class="panel__user__rating"><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating-active" aria-hidden="true"></i><i class="fa fa-star rating" aria-hidden="true"></i><span class="rating-title">рейтинг</span></div>
+              </div>
+            </div>
+            <div class="panel__info">
+              <p class="panel__info__place">Россия, Москва</p><a class="panel__info__title" href="#">Купить сувенирную тарелку</a>
+              <div class="panel__offer">Надо в Дмитрово в Спортмастере купить пуховик,который заказан через интернет. И отправить его в Череповец.У нас в регионе его...</div>
+            </div>
+            <div class="panel__footer row align-items-center">
+              <div class="col-md-6">
+                <div class="panel__data">Дата исполнения: <span>23.01.2019</span></div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel__favorite"><i class="panel__favorite__icon fa fa-heart" aria-hidden="true"> </i></div>
               </div>
             </div>
           </div>

@@ -39,4 +39,16 @@ $(document).ready(() => {
         $(this).toggleClass("filter__item--active");
     });
 
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 150) {
+            // $('#scroll_top').css('opacity','1');
+            $('.sticky-top').addClass("scroll");
+            $('.sticky-top .header-top').slideUp();
+        } else if ($(this).scrollTop() < 60) {
+            // $('#scroll_top').css('opacity','0');
+            $('.sticky-top').removeClass("scroll");
+            $('.sticky-top .header-top').slideDown();
+        }
+    });
+
 });

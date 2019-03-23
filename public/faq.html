@@ -1,0 +1,261 @@
+
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Wanter</title>
+    <link href="./bower_components/normalize-css/normalize.css" rel="stylesheet"/>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./bower_components/select2/dist/css/select2.min.css" rel="stylesheet"/>
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./bower_components/OwlCarousel/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./bower_components/OwlCarousel/owl.theme.default.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <link href="./css/style.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="./js/jquery.min.js"></script>
+    <header class="sticky-top">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__navbar navbar navbar-expand">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="">Как мы работаем?</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Связаться с нами</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Контактная информация  </a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="personalPage" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">mail@mail.ru</a>
+                <div class="dropdown-menu" aria-labelledby="personalPage"><a class="dropdown-item" href="#">Моя страница </a><a class="dropdown-item" href="#">Мои заявки </a><a class="dropdown-item" href="#">Сообщения </a><a class="dropdown-item" href="#">Уведомления </a><a class="dropdown-item" href="#">Избранное </a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Выход </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-navbar">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg"><a class="navbar-brand" href="/"><img class="navbar-brand__logo" src="../images/logoSVG.svg"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=""><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/world.html">Идеи и вдохновение</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/request.html">Все заявки  </a></li>
+                <li class="nav-item"><a class="nav-link" href="/original.html">Оригинальные заявки</a></li>
+                <li class="nav-itemhtml"><a class="nav-link" href="/faq.html">FAQ</a></li>
+              </ul><a class="btn header-navbar__btn" href="#">Создать заявку</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="content content_sm">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item breadcrumb__item_last"><span>FAQ</span></li>
+        </ul>
+        <h1 class="content__title text-bold mb-0">Популярные вопросы (FAQ)<span class="content__info" data-toggle="tooltip" data-placement="right" title="Подсказка-информер">?</span></h1>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="filter__row d-flex flex-row flex-wrap nav" id="faqTab" role="tablist">
+              <div class="filter__item active" href="#account" data-toggle="tab" role="tab"><span class="filter__item__title">Аккаунт пользователя</span></div>
+              <div class="filter__item" href="#rating" data-toggle="tab" role="tab"><span class="filter__item__title">Рейтинг</span></div>
+              <div class="filter__item" href="#request" data-toggle="tab" role="tab"><span class="filter__item__title">Заявка</span></div>
+              <div class="filter__item" href="#performer" data-toggle="tab" role="tab"><span class="filter__item__title">Информация для исполнителя</span></div>
+              <div class="filter__item" href="#customer" data-toggle="tab" role="tab"><span class="filter__item__title">Информация для заказчика</span></div>
+              <div class="filter__item" href="#pay" data-toggle="tab" role="tab"><span class="filter__item__title">Оплата</span></div>
+              <div class="filter__item" href="#question" data-toggle="tab" role="tab"><span class="filter__item__title">Спорные ситуации</span></div>
+              <div class="filter__item" href="#contact" data-toggle="tab" role="tab"><span class="filter__item__title">Связь с администрацией ресурса</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <div class="tab-content">
+          <div class="tab-pane active" id="account" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-3">Как отредактировать содержимое аккаунта</div>
+                <div class="content__offer">В верхнем меню сайта нажмите кнопку с вашим логином (e-mail), в выпадающем меню выберите пункт «Моя страница». Практически в центре экрана под местом для фотографии расположена кнопка «Редактировать». После её нажатия открывается форма, где вы можете загрузить фотографию профиля, изменить имя, дату рождения, телефон, город. Поставив галочку в соответствующем поле можете подписаться на получение уведомлений на почту. Для фиксации внесённых изменений нажмите кнопку «Сохранить».</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-3">Как восстановить пароль</div>
+                <div class="content__offer">Для восстановления пароля под полем для его ввода предусмотрена фраза: «Если вы забыли пароль, вы можете восстановить его». Нажмите на ссылку и в открывшемся поле заполните ваш е-mail (логин), на него будет отправлена ссылка для восстановления пароля. При переходе по ссылке из письма сайт попросит ввести новый пароль и сохранить.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-3">Как войти в свой аккаунт</div>
+                <div class="content__offer">В верхнем меню сайта нажмите кнопку «Вход». В открывшуюся форму введите E-mail (логин) и пароль, нажмите кнопку «Вход».</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="rating" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-3">Как формируется рейтинг исполнителя или заказчика</div>
+                <div class="content__offer">Рейтинг формируется на основании оценок заказчиков и (или) исполнителей с которыми вы сотрудничали. Возможность поставить оценку, оставить отзыв появляется у заказчика и исполнителя после подтверждения заказчиком исполнения заявки.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-3">Для чего нужен рейтинг</div>
+                <div class="content__offer">Рейтинг облегчает выбор исполнителя / заказчика. Мало кто захочет сотрудничать с лицом, у которого рейтинг 1 из 5. Чем выше рейтинг, тем больше шансов заключить сделку. Следовательно, каждая заявка влияет на вашу репутацию и требует честного, открытого и порядочного сотрудничества.</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="request" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как обсудить условия заявки</div>
+                <div class="content__offer">Открываем заявку нажатием ссылки &laquo;Читать полностью&raquo;. Под условиями заявки есть раздел &laquo;Обсуждение заявки&raquo;. Через него вы можете задавать вопросы заказчику, обсуждать с ним условия заявки.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как искать заявку</div>
+                <div class="content__offer">В верхнем меню сайта нажмите кнопку &laquo;Заявки&raquo;. Откроется страница со всеми заявками, размещёнными на сайте. Для поиска подходящих вам заявок используйте&nbsp;фильтры по следующим критериям: Страна, регион, место выполнения заявки, статус (заявки), тип (заявки). Интересные заявки можно добавлять в избранное, нажатием на кнопку &laquo;Добавить в избранное&raquo;.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Что делать если я обнаружил (-а) заявку, нарушающую условия использования сервиса</div>
+                <div class="content__offer">На каждой странице с заявкой справа, под информацией о заявке есть ссылка &laquo;Пожаловаться на заявку&raquo;. После нажатия на неё откроется форма для описания сути нарушений. Каждую жалобу рассматривает администрация сайта и принимает решение в соответствии с условиями пользовательского соглашения.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как откликнуться на заявку</div>
+                <div class="content__offer">Откликнуться можно на заявки в статусе &laquo;Опубликована&raquo;. В правой части информации о заявке есть кнопка &laquo;Стать исполнителем&raquo;. После нажатия на неё появится форма для ввода цены заявки, за которую вы готовы её исполнить. Пожалуйста, обратите внимание: ниже поля ввода цены указана сумма, с учётом всех комиссий, которую Вы получите после исполнения заявки. Перед нажатием кнопки &laquo;Отправить&raquo; необходимо поставить галочку в подтверждение согласия стать исполнителем данной заявки на условиях, указанных в данной форме.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как исполнителю изменить условия заявки или отменить заявку</div>
+                <div class="content__offer">Изменить условия заявки можно до момента выбора заказчиком исполнителя (статус заявки &laquo;Опубликована&raquo;). В правой части информации о заявке есть кнопка &laquo;Изменить условия&raquo;. Изменение условий аналогично порядку отклика на заявку (предыдущий пункт).</div>
+                <div class="content__offer">Исполнитель может отменить заявку на исполнение. Это можно сделать до момента выбора заказчиком исполнителя (статус заявки &laquo;Опубликована&raquo;). В правой части информации о заявке есть кнопка &laquo;Отменить заявку на исполнение&raquo;.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как общаться с заказчиком или исполнителем</div>
+                <div class="content__offer">Из раздела &laquo;Заявки&raquo; открываем заявку нажатием ссылки &laquo;Читать полностью&raquo;. Из раздела &laquo;Мои заявки&raquo; открываем заявку нажатием кнопки &laquo;Посмотреть&raquo;. Под условиями заявки есть раздел &laquo;Обсуждение заявки&raquo;. Через него вы можете задавать вопросы заказчику / исполнителю, обсуждать с ним условия заявки. Сервис сообщений также доступен через раздел &laquo;Сообщения&raquo; профиля пользователя.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как изменить заявку</div>
+                <div class="content__offer">Заказчик может изменить заявку до того, как он выбрал исполнителя (статус &laquo;Опубликована&raquo;). Сделать это можно в разделе &laquo;Мои заявки&raquo; профиля пользователя. На заявке следует нажать ссылку &laquo;Изменить&raquo;.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как удалить заявку</div>
+                <div class="content__offer">Заказчик может удалить заявку до того, как он выбрал исполнителя (статус &laquo;Опубликована&raquo;). Сделать это можно в разделе &laquo;Мои заявки&raquo; профиля пользователя. На заявке следует нажать ссылку &laquo;Удалить&raquo;.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как создать заявку</div>
+                <div class="content__offer">В разделе &laquo;Заявки&raquo; и &laquo;Мои заявки&raquo; сверху есть кнопка &laquo;Создать заявку&raquo;. После нажатия на неё открывается форма заявки. Вам необходимо выбрать тип заявки, указать место выполнения заявки, язык, срок выполнения (выполнить до), цену, текст заявки, доказательство исполнения. По нажатии на кнопку &laquo;Дополнительные поля&raquo; появляется возможность установить ценз по минимальному рейтингу исполнителя и минимальному количеству выполненных исполнителем заявок. После заполнения нажимаем кнопку &laquo;Сохранить&raquo;. Сохранённую заявку видите только вы. Чтобы заявка стала доступна для поиска исполнителями её нужно опубликовать нажатием на соответствующую кнопку вверху формы редактирования заявки или на заявке в списке &laquo;Мои заявки&raquo;.</div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="content__title content__title_heading-4">Как заказчику создать привлекательную заявку</div>
+                <div class="content__offer">Пишите заявку простым языком, понятным ребёнку. После описания всех требований перечитайте заявку и мысленно поставьте себя на место исполнителя. Всё ли ясно? Не возникают ли дополнительные вопросы?</div>
+                <div class="content__offer">Избегайте двусмысленностей и разночтений.</div>
+                <div class="content__offer">Если заявка подразумевает креатив и «творческий полёт фантазии» очертите их границы. Обязательно опишите моменты, которые для вас важны. Не надейтесь на очевидность ситуации. Исполнитель может мыслить иначе, нежели вы.</div>
+                <div class="content__offer">Полезно при составлении заявки подумать какие условия могут вызвать спор и избежать его подробно описав.</div>
+                <div class="content__offer">Избегайте абстрактных формулировок. Слово «красивый» для каждого человека несёт свой смысл.</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="performer" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-9">
+                <div class="content__title content__title_heading-3">Советы исполнителям для успешной работы</div>
+                <div class="content__offer">Перед тем как откликнуться на заявку разъясните имеющиеся неточности. Дьявол кроется в деталях. Вы должны чётко понимать, что нужно сделать, в какой срок, как отчитаться о результате.</div>
+                <div class="content__offer">Думайте о заказчике. Если не уверены, что справитесь, лучше отказаться и поискать более подходящие заявки. Некачественный результат принесёт множество неблагоприятных последствий. Во-первых, кому-то будет испорчен праздник (например, если заявка связана с сюрпризом к дню рождения). Во-вторых, недовольство заказчика полученным результатом выльется в понижение рейтинга исполнителя и отрицательный отзыв.</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="customer" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-9">
+                <div class="content__title content__title_heading-3">Как выбрать исполнителя</div>
+                <div class="content__offer">Непосредственный выбор можно осуществить одним из двух способов. В информации о заявке справа есть кнопка «Назначить исполнителя». Также, под заявкой справа от заголовка «Обсуждение заявки» имеется ссылка «Выбор исполнителя». Далее в списке, рядом с информацией об исполнителе нажимаем кнопку «Выбрать». В появившейся форме вы можете предложить свою цену заявки. Система автоматически посчитает комиссию и ниже укажет общую сумму с учётом комиссии сервиса. Заказчик путём постановки галочки даёт согласие на выбор данного пользователя исполнителем на указанных условиях. Далее нажимается кнопка «Выбрать исполнителем и оплатить». Заказчик будет переадресован на сайт платёжной системы КИВИ, где необходимо ввести данные банковской карты. После списания денежных средств исполнитель считается выбранным и заявка меняет статус на «Исполняется».</div>
+                <div class="content__offer">При выборе исполнителя ориентируйтесь на отзывы других заказчиков и рейтинги исполнителей.</div>
+                <div class="content__offer">С помощью системы сообщений вы можете выяснить наличие у претендентов определённых навыков и квалификации, опыта в исполнении аналогичных заявок; достаточность времени и других ресурсов для качественного исполнения.</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="pay" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-9 mb-5">
+                <div class="content__title content__title_heading-3">Какой размер комиссии за использование сервиса</div>
+                <div class="content__offer">
+                  КИВИ банк (АО) за сервис «Безопасная сделка» взымает комиссию: 3% + 30 рублей В процессе исполнения заявки деньги находятся на счёте КИВИ. 3% снимаются при получении банком, 30 рублей при переводе исполнителю.The Wanter получает комиссию 9% от суммы, переведённой заказчиком КИВИ (списывается при переводе исполнителю).
+                  Общая комиссия от 12,8% до 14,5% + 30 рублей (в зависимости от суммы сделки).
+                  Указанные комиссии распределяются между заказчиком и исполнителем следующим образом. Заказчик уплачивает комиссию в размере 6.5% от стоимости заявки + 15 рублей (комиссия списывается дополнительно к цене заявки). Комиссия с исполнителя: от 6,3% до 8%, в зависимости от цены заявки (ниже приводится таблица с расчётами комиссии).
+                  Приведём пример. Цена заявки – 100 рублей. Заказчик уплачивает: 100 рублей + комиссия (6.5% + 15 рублей) = 122 рубля (неполный рубль округляется в большую сторону до целого рубля). Из 122 рублей списываются комиссии ((3% + 30 рублей КИВИ) + 9% thewanter). После принятия исполнителем выполненной заявки исполнитель получает 77,36 рублей.
+                  Что нужно знать об Арбитраже
+                  Если арбитраж выигрывает Заказчик и с момента выбора Исполнителя прошло менее 72 часов, Заказчик получает внесённую сумму полностью.
+                  Если больше 72 часов, то Заказчик, выигравший арбитраж получает внесённую сумму за вычетом комиссии КИВИ (3% от поступившей суммы).
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Срок возвращения денежных средств Заказчику</div>
+                <div class="content__offer">
+                  Заказчик имеет право отменить размещённую им заявку, по которой выбран Исполнитель. При условии, что с момента внесения денежных средств Заказчиком прошло менее 72 часов – деньги возвращаются незамедлительно. В случае, если с момента внесения денежных средств Заказчиком прошло более 72 часов – деньги возвращаются в течение 30 дней. Фактически, деньги приходят в течение 1-5 дней. </div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как получить деньги за выполненную заявку</div>
+                <div class="content__offer">После принятия заказчиком результатов исполнения исполнитель получает соответствующее уведомление. На странице с заявкой справа появляется кнопка &laquo;Получить деньги&raquo;. После нажатия на неё пользователь увидит форму ввода реквизитов банковской карты на которую нужно перечислить деньги. Средства поступают мгновенно.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как производятся расчёты между заказчиком и&nbsp;исполнителем</div>
+                <div class="content__offer">Расчёты производятся через сервис «Безопасная сделка» предоставляемый КИВИ Банк (АО). При выборе исполнителя система предлагает заказчику оплатить стоимость заявки и комиссию. Оплата производится по банковской карте (платёжные системы МИР, MasterCard, VISA). Сумма списывается Банком и хранится на его счёте до момента завершения сделки (принятия заказчиком исполнения / принятия заказчиком отказа исполнителя / принятия арбитражем решения). Таким образом исполнителю гарантируется оплата надлежащего исполнения, а заказчику – контроль над оплатой (оплачивается только качественно исполненная заявка).                            </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="question" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как урегулировать спорную ситуацию</div>
+                <div class="content__offer">Рекомендуем в первую очередь выяснить позицию противоположной стороны, понять мотивацию и причины поведения. С этой информацией будет легче прийти к общему знаменателю и достигнуть взаимовыгодных договорённостей. Если же договориться не удалось, вы можете обратиться в Арбитраж для разрешения спора.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Что такое арбитраж</div>
+                <div class="content__offer">Арбитраж проводит практикующий юрист с опытом работы более 9 лет. Арбитр изучает условия заявки и результаты её исполнения, переписку сторон. По результатам принимается одно из решений: вернуть стоимость заявки Заказчику, либо перевести Исполнителю.&nbsp;Заказчику возвращаются деньги в случае некачественной работы или одностороннего отказа Исполнителя от сделки.</div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="contact" role="tabpanel">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как связаться с администрацией сайта</div>
+                <div class="content__offer">В нижнем меню слева есть ссылка «Связаться с нами». Она же доступна через кнопку «Помощь» верхнего меню. По ссылке открывается форма обратной связи, отсылающая ваше сообщение нам на электронную почту. Контактная информация и наши реквизиты доступны через кнопку «Контакты» в верхнем и нижнем меню.</div>
+              </div>
+              <div class="col-md-12 col-lg-6 mb-5">
+                <div class="content__title content__title_heading-4">Как предложить идею или сообщить об ошибке</div>
+                <div class="content__offer">В нижнем меню слева есть ссылка «Связаться с нами». Она же доступна через кнопку «Помощь» верхнего меню. По ссылке открывается форма обратной связи, отсылающая Ваше сообщение нам на электронную почту.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="row pt-5 pb-5"> 
+          <div class="col-sm-6 col-lg-4"> <a class="navbar-brand" href="#"><img class="navbar-brand__logo" src="./images/logoSVG.svg"/></a>
+            <p class="copyright">Инновационный сервис по выполнению <br/>поручений в России и за рубежом.</p>
+            <p class="footer__contact">E-mail: <a href="mailto:mail@thewanter.com">mail@thewanter.com</a></p>
+          </div>
+          <div class="col-sm-6 col-lg-4"> 
+            <p class="footer__label">Правила сервиса</p>
+            <ul class="footer__nav"> 
+              <li><a class="footer__nav__item" href="/terms-of-use" tabindex="-1">Пользовательское соглашение</a></li>
+              <li><a class="footer__nav__item" href="/privacy-policy" tabindex="-1">Политика конфиденциальности</a></li>
+              <li><a class="footer__nav__item" href="/security-policy" tabindex="-1">Политика безопасности</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-4"></div>
+          <div class="col-sm-12 pt-5"><span class="copyright">ООО “Wanter”. 2017 © Все права защищены.</span><img class="footer__pay" src="images/logo-mir.svg"/><img class="footer__pay footer__pay_mastercard" src="images/logo-mastercard.svg"/><img class="footer__pay" src="images/visa-logo.svg"/></div>
+        </div>
+      </div>
+    </footer>
+    <script src="./bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="./bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>
